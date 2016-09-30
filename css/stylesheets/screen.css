@@ -590,8 +590,8 @@ th {
 }
 /* line 308, ../sass/screen.scss */
 .cart-sum .total-symbol {
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: bold;
 }
 /* line 312, ../sass/screen.scss */
 .cart-sum .submit-btn {
@@ -599,34 +599,41 @@ th {
   display: inline-block;
   width: 55px;
   text-align: center;
-  background: #aaa none repeat scroll 0 0;
   color: #fff;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 320, ../sass/screen.scss */
-.cart-sum .submit-btn:hover {
+
+/* line 322, ../sass/screen.scss */
+.btn-common {
   cursor: not-allowed;
+  background-color: #aaa;
 }
 
-/* line 325, ../sass/screen.scss */
+/* line 326, ../sass/screen.scss */
+.selected {
+  background-color: #f40;
+  cursor: pointer;
+}
+
+/* line 330, ../sass/screen.scss */
 .wrap-line {
   background: #e6e6e6 none no-repeat scroll 0 0;
   height: 2px;
 }
 
-/* line 329, ../sass/screen.scss */
+/* line 334, ../sass/screen.scss */
 .selectColumn {
   border-bottom: 2px solid #f40;
 }
 
-/* line 332, ../sass/screen.scss */
+/* line 337, ../sass/screen.scss */
 .tbMain {
   min-height: 210px;
 }
 
-/* line 335, ../sass/screen.scss */
+/* line 340, ../sass/screen.scss */
 .commodityColumn {
   color: #3c3c3c;
   height: 50px;
@@ -635,25 +642,25 @@ th {
   overflow: hidden;
 }
 
-/* line 343, ../sass/screen.scss */
+/* line 348, ../sass/screen.scss */
 .th-chk, .commodityInfo .td-chk {
   position: relative;
   height: 50px;
   width: 45px;
 }
 
-/* line 349, ../sass/screen.scss */
+/* line 354, ../sass/screen.scss */
 .selectAll {
   position: absolute;
   padding-left: 20px;
   width: 80px;
   cursor: pointer;
 }
-/* line 354, ../sass/screen.scss */
+/* line 359, ../sass/screen.scss */
 .selectAll input {
   cursor: pointer;
 }
-/* line 357, ../sass/screen.scss */
+/* line 362, ../sass/screen.scss */
 .selectAll label {
   margin-top: -2px;
   position: absolute;
@@ -661,169 +668,177 @@ th {
   cursor: pointer;
 }
 
-/* line 364, ../sass/screen.scss */
+/* line 369, ../sass/screen.scss */
 .th-inner, .commodityInfo .td-item {
   width: 302px;
 }
 
-/* line 369, ../sass/screen.scss */
+/* line 374, ../sass/screen.scss */
 .commodityMsg {
   padding-left: 91px;
 }
-/* line 371, ../sass/screen.scss */
+/* line 376, ../sass/screen.scss */
 .commodityMsg div {
   margin-top: -3px;
 }
 
-/* line 375, ../sass/screen.scss */
+/* line 380, ../sass/screen.scss */
 .th-space, .commodityInfo .td-info {
   width: 172px;
   padding-right: 20px;
 }
 
-/* line 380, ../sass/screen.scss */
+/* line 385, ../sass/screen.scss */
 .td-inner {
   padding-left: 10px;
   margin-top: -2px;
 }
 
-/* line 384, ../sass/screen.scss */
+/* line 389, ../sass/screen.scss */
 .th-price, .th-amount, .commodityInfo .td-price, .commodityInfo .td-amount {
   width: 120px;
 }
 
-/* line 391, ../sass/screen.scss */
+/* line 396, ../sass/screen.scss */
 .th-sum, .commodityInfo .td-sum {
   width: 105px;
 }
-/* line 394, ../sass/screen.scss */
+/* line 399, ../sass/screen.scss */
 .th-sum .td-inner, .commodityInfo .td-sum .td-inner {
   padding-left: 0;
 }
 
-/* line 398, ../sass/screen.scss */
+/* line 403, ../sass/screen.scss */
 .th-operation, .commodityInfo .td-operation {
   width: 84px;
   padding-left: 15px;
 }
-/* line 402, ../sass/screen.scss */
+/* line 407, ../sass/screen.scss */
 .th-operation .td-inner, .commodityInfo .td-operation .td-inner {
   padding-left: 0;
 }
 
-/* line 409, ../sass/screen.scss */
+/* line 411, ../sass/screen.scss */
+.mainCommodity {
+  margin-bottom: 10px;
+}
+
+/* line 417, ../sass/screen.scss */
 .shopMsg {
   line-height: 38px;
   padding-left: 15px;
   position: relative;
 }
-/* line 413, ../sass/screen.scss */
+/* line 421, ../sass/screen.scss */
 .shopMsg .shopMsg-input {
   position: relative;
   top: 2px;
+  cursor: pointer;
   left: 5px;
 }
-/* line 418, ../sass/screen.scss */
+/* line 427, ../sass/screen.scss */
 .shopMsg label {
   margin-left: 10px;
+  cursor: pointer;
+  display: inline-block;
 }
-/* line 421, ../sass/screen.scss */
+/* line 432, ../sass/screen.scss */
 .shopMsg a {
   text-decoration: none;
   color: #3c3c3c;
 }
-/* line 424, ../sass/screen.scss */
+/* line 435, ../sass/screen.scss */
 .shopMsg a:hover {
   color: #f40;
   text-decoration: underline;
 }
 
-/* line 430, ../sass/screen.scss */
+/* line 441, ../sass/screen.scss */
 .commodityInfo {
   border: 1px solid #ccc;
   padding: 20px 0;
   background-color: #FCFCFC;
 }
-/* line 439, ../sass/screen.scss */
+/* line 450, ../sass/screen.scss */
 .commodityInfo .td-chk {
   width: 35px;
   min-height: 79px;
   padding-left: 10px;
 }
-/* line 445, ../sass/screen.scss */
+/* line 456, ../sass/screen.scss */
 .commodityInfo .td-item {
   min-height: 79px;
 }
-/* line 449, ../sass/screen.scss */
+/* line 460, ../sass/screen.scss */
 .commodityInfo .desImg {
   display: inline-block;
   float: left;
 }
-/* line 452, ../sass/screen.scss */
+/* line 463, ../sass/screen.scss */
 .commodityInfo .desImg img {
   max-width: 80px;
   max-height: 80px;
 }
-/* line 457, ../sass/screen.scss */
+/* line 468, ../sass/screen.scss */
 .commodityInfo .item-info {
   margin: -3px 0 0 91px;
   padding-right: 15px;
   min-height: 79px;
 }
-/* line 461, ../sass/screen.scss */
+/* line 472, ../sass/screen.scss */
 .commodityInfo .item-info a {
   text-decoration: none;
   color: #3c3c3c;
 }
-/* line 464, ../sass/screen.scss */
+/* line 475, ../sass/screen.scss */
 .commodityInfo .item-info a:hover {
   color: #f40;
   text-decoration: underline;
 }
-/* line 470, ../sass/screen.scss */
+/* line 481, ../sass/screen.scss */
 .commodityInfo .item-other-space {
   min-height: 26px;
   overflow: hidden;
 }
-/* line 474, ../sass/screen.scss */
+/* line 485, ../sass/screen.scss */
 .commodityInfo .sevenDay {
   display: inline-block;
   padding: 0 2px;
 }
-/* line 478, ../sass/screen.scss */
+/* line 489, ../sass/screen.scss */
 .commodityInfo .td-info {
   min-height: 79px;
 }
-/* line 482, ../sass/screen.scss */
+/* line 493, ../sass/screen.scss */
 .commodityInfo .td-info-msg {
   min-height: 84px;
 }
-/* line 484, ../sass/screen.scss */
+/* line 495, ../sass/screen.scss */
 .commodityInfo .td-info-msg p {
   margin: 0 5px 0 15px;
   color: #9c9c9c;
   padding-bottom: 3px;
   margin-top: -2px;
 }
-/* line 491, ../sass/screen.scss */
+/* line 502, ../sass/screen.scss */
 .commodityInfo .td-price {
   min-height: 79px;
 }
-/* line 494, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 .commodityInfo .td-price .non-discount {
   font-size: 1em;
   color: #9c9c9c;
   text-decoration: line-through;
 }
-/* line 499, ../sass/screen.scss */
+/* line 510, ../sass/screen.scss */
 .commodityInfo .td-price .discount {
   font-weight: 600;
 }
-/* line 501, ../sass/screen.scss */
+/* line 512, ../sass/screen.scss */
 .commodityInfo .td-price .discount span {
   font-size: 1.2em;
 }
-/* line 505, ../sass/screen.scss */
+/* line 516, ../sass/screen.scss */
 .commodityInfo .td-price .promotion {
   height: 23px;
   line-height: 23px;
@@ -840,19 +855,19 @@ th {
   font-size: 1.1em;
   padding-left: 3px;
 }
-/* line 519, ../sass/screen.scss */
+/* line 530, ../sass/screen.scss */
 .commodityInfo .td-price .promotion:hover .promotionIcon {
   position: absolute;
   margin-top: 5px;
   border-bottom-color: #f40;
 }
-/* line 527, ../sass/screen.scss */
+/* line 538, ../sass/screen.scss */
 .commodityInfo .td-price .promotionIcon {
   position: absolute;
   margin-top: 10px;
   border-top-color: #f40;
 }
-/* line 534, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 .commodityInfo .proSlidedown {
   width: 136px;
   padding: 10px;
@@ -865,26 +880,26 @@ th {
   -webkit-box-shadow: 2px 2px 3px #f4f4f4;
   box-shadow: 2px 2px 3px #f4f4f4;
 }
-/* line 543, ../sass/screen.scss */
+/* line 554, ../sass/screen.scss */
 .commodityInfo .proSlidedown p {
   color: #9c9c9c;
 }
-/* line 546, ../sass/screen.scss */
+/* line 557, ../sass/screen.scss */
 .commodityInfo .proSlidedown .newPro {
   padding-bottom: 4px;
 }
-/* line 550, ../sass/screen.scss */
+/* line 561, ../sass/screen.scss */
 .commodityInfo .td-amount {
   min-height: 79px;
 }
-/* line 554, ../sass/screen.scss */
+/* line 565, ../sass/screen.scss */
 .commodityInfo .item-amount {
   height: 25px;
   overflow: hidden;
   position: relative;
   z-index: 1;
 }
-/* line 559, ../sass/screen.scss */
+/* line 570, ../sass/screen.scss */
 .commodityInfo .item-amount a {
   display: inline-block;
   height: 23px;
@@ -899,23 +914,23 @@ th {
   font-size: 14px;
   color: #444;
 }
-/* line 572, ../sass/screen.scss */
+/* line 583, ../sass/screen.scss */
 .commodityInfo .item-amount a:hover {
   border: 1px solid #f60;
 }
-/* line 576, ../sass/screen.scss */
+/* line 587, ../sass/screen.scss */
 .commodityInfo .item-amount .amount-right {
   border-left-color: #aaa;
 }
-/* line 579, ../sass/screen.scss */
+/* line 590, ../sass/screen.scss */
 .commodityInfo .item-amount .amount-color {
   color: #444;
 }
-/* line 582, ../sass/screen.scss */
+/* line 593, ../sass/screen.scss */
 .commodityInfo .item-amount .amount-left {
   border-right-color: #aaa;
 }
-/* line 586, ../sass/screen.scss */
+/* line 597, ../sass/screen.scss */
 .commodityInfo .item-amount input {
   width: 39px;
   height: 15px;
@@ -927,34 +942,137 @@ th {
   margin-left: 19px;
   text-align: center;
 }
-/* line 598, ../sass/screen.scss */
+/* line 609, ../sass/screen.scss */
 .commodityInfo .td-sum {
   min-height: 79px;
   color: #f40;
   font-weight: bold;
 }
-/* line 603, ../sass/screen.scss */
+/* line 614, ../sass/screen.scss */
 .commodityInfo .td-sum em {
   font-style: normal;
   font-size: 1.3em;
 }
-/* line 607, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 .commodityInfo .td-sum span {
   font-size: 1.2em;
 }
-/* line 611, ../sass/screen.scss */
+/* line 622, ../sass/screen.scss */
 .commodityInfo .td-operation {
   min-height: 79px;
 }
-/* line 614, ../sass/screen.scss */
+/* line 625, ../sass/screen.scss */
 .commodityInfo .td-operation a {
   color: #3c3c3c;
   text-decoration: none;
   display: inline-block;
   margin-top: 4px;
 }
-/* line 619, ../sass/screen.scss */
+/* line 630, ../sass/screen.scss */
 .commodityInfo .td-operation a:hover {
   color: #f40;
   text-decoration: underline;
+}
+
+/* line 638, ../sass/screen.scss */
+.footer {
+  width: 990px;
+  height: 50px;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  background-color: #E5E5E5;
+}
+
+/* line 647, ../sass/screen.scss */
+.all-selected {
+  cursor: pointer;
+  float: left;
+  line-height: 50px;
+  padding-left: 5px;
+  width: 50px;
+}
+/* line 653, ../sass/screen.scss */
+.all-selected input {
+  position: relative;
+  top: 1px;
+  cursor: pointer;
+}
+/* line 658, ../sass/screen.scss */
+.all-selected label {
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* line 663, ../sass/screen.scss */
+.operation {
+  float: left;
+  line-height: 50px;
+}
+/* line 666, ../sass/screen.scss */
+.operation a {
+  margin-left: 25px;
+  color: #3c3c3c;
+  text-decoration: none;
+}
+/* line 670, ../sass/screen.scss */
+.operation a:hover {
+  text-decoration: underline;
+  color: #f40;
+}
+
+/* line 677, ../sass/screen.scss */
+.float-bar-right {
+  float: right;
+  line-height: 50px;
+  padding-left: 20px;
+}
+
+/* line 682, ../sass/screen.scss */
+.amount-sum {
+  cursor: pointer;
+  float: left;
+  padding-right: 20px;
+}
+/* line 686, ../sass/screen.scss */
+.amount-sum em {
+  font-style: normal;
+  color: #f40;
+  font-size: 1.4em;
+}
+
+/* line 692, ../sass/screen.scss */
+.price-sum {
+  float: left;
+  line-height: 44px;
+  padding-right: 20px;
+}
+/* line 696, ../sass/screen.scss */
+.price-sum .moneySym {
+  color: #f40;
+}
+/* line 699, ../sass/screen.scss */
+.price-sum .total-sum {
+  font-size: 1.8em;
+  font-weight: bold;
+  font-style: normal;
+  color: #f40;
+}
+
+/* line 706, ../sass/screen.scss */
+.btn-area {
+  float: left;
+  line-height: 50px;
+}
+/* line 709, ../sass/screen.scss */
+.btn-area a {
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+  font-size: 1.8em;
+  font-family: "Lantinghei SC","Microsoft Yahei";
+  color: #fff;
+  text-decoration: none;
+  border-radius: 2px;
 }

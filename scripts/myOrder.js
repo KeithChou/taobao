@@ -79,21 +79,28 @@ $(document).ready(function() {
 	});
 
 	//下边框移动
-	$('.btn-switch-cart').mouseover(function(event) {
+	$('.btn-switch-cart').mouseenter(function(event) {
 		$('.btn-switch-cart').removeClass('selectColumn');
 		$(this).addClass('selectColumn');
+	}).mouseleave(function(event) {
+		$('.btn-switch-cart').removeClass('selectColumn');
+		$('.switch-cart-0').addClass('selectColumn');
 	});
 
 	//卖家促销下拉列表
 	$('.promotion').hover(function() {
-		$('.proSlidedown').stop().show('fast');
+		$(this).siblings('.proSlidedown').stop().show('fast');
 	}, function() {
-		$('.proSlidedown').stop().hide('fast');
+		$(this).siblings('.proSlidedown').stop().hide('fast');
 	});
 
 
 	//商品数量的输入框
 	$('.item-amount input').keypress(function(event) {
+		var thisParent = $(this).parents('.td-amount');
+		var thisInput = $(this).parent('.item-amount');
+		var $text = thisParent.siblings('.td-price').find('span').text();
+		var tdSum = thisParent.find('.td-sum').children('span');
 		var keyCode = event.keyCode ? event.keyCode : event.charCode ;
 		if (keyCode !== 0 && (keyCode <48 || keyCode >57) && keyCode!==8 && keyCode !==37 && keyCode !==39 && keyCode !==46) {
 			return false;
@@ -101,17 +108,24 @@ $(document).ready(function() {
 			return true;
 		}
 	}).keyup(function(event) {
+		var thisParent = $(this).parents('.td-amount');
+		var thisInput = $(this).parent('.item-amount');
+		var $text = thisParent.siblings('.td-price').find('span').text();
+		var tdSum = thisParent.siblings('.td-sum').find('span');
 		var keyCode = event.keyCode ? event.keyCode : event.charCode ;
 		if (keyCode !== 8) {
 			var num = parseInt($(this).val()) || 0;
 			num = num < 1 ? 1 : num;
-			$(this).val(num);
 			var num = $(this).val();
 			tdSum.text($text * num + '.00');
 		};
 		var anNum = $(this).val();
 		tdSum.text($text * anNum +'.00');
 	}).blur(function(event) {
+		var thisParent = $(this).parents('.td-amount');
+		var thisInput = $(this).parent('.item-amount');
+		var $text = thisParent.siblings('.td-price').find('span').text();
+		var tdSum = thisParent.siblings('.td-sum').find('span');
 		var keyCode = event.keyCode ? event.keyCode : event.keyCode;
 		var num = parseInt($(this).val()) || 0;
 		num = num < 1 ? 1 : num ;
@@ -121,12 +135,14 @@ $(document).ready(function() {
 	});
 
 	//商品数量增加
-	var $text = $('.td-price').find('span').text();
-	var tdSum = $('.td-sum span');
 	$('.amount-right').click(function(event) {
-		var num = $('.item-amount input').val();
+		var thisParent = $(this).parents('.td-amount');
+		var thisInput = $(this).parent('.item-amount');
+		var $text = thisParent.siblings('.td-price').find('span').text();
+		var tdSum = thisParent.siblings('.td-sum').find('span');
+		var num = thisInput.find('input').val();
 		num++;
-		$('.item-amount input').val(num);
+		thisInput.find('input').val(num);
 		$('.amount-left').css({
 			'cursor':'pointer',
 			'color':'#444'
@@ -135,18 +151,118 @@ $(document).ready(function() {
 		return false;
 	});
 
-
 	//商品数量减少
 	$('.amount-left').click(function(event){
-		var input = $('.item-amount input');
-		var num = input.val();
+		var thisParent = $(this).parents('.td-amount');
+		var thisInput = $(this).parent('.item-amount');
+		var $text = thisParent.siblings('.td-price').find('span').text();
+		var tdSum = thisParent.siblings('.td-sum').find('span');
+		var num = thisInput.find('input').val();
 		if (num > 1 ) {
 			num--;
-			input.val(num);
+			thisInput.find('input').val(num);
 		}
 		tdSum.text($text * num +' .00');
 		return false;
 	});
+
+	//全选商品金额相加
+	function sumTotal(){
+		var $tdSum = $('.td-sum').find('span').text().split('.00');
+		var $total=0;
+		for (var i = 0; i < $tdSum.length-1; i++) {
+			$total+=parseInt($tdSum[i]);
+		}
+		return $total;
+	}
+
+	//已选商品数量
+	function selectedSum(){
+		var sum = $('.td-inner').find('input').length;
+		return sum;
+	}
+
+	//全选商品
+	var $store = $('.shopMsg').find('input[type="checkbox"]');
+	var $tdInner = $('.td-inner').find('input[type="checkbox"]');
+	$('.selectAll').on('click', '.allSelected1', function(event) {
+		if ($(this).prop('checked') === true) {
+			$store.prop('checked',true);
+			$tdInner.prop('checked',true);
+			$('.allSelected2').prop('checked',true);
+			$('.total-sum').text(sumTotal() + '.00');
+			$('.total-symbol').text(sumTotal() + '.00');
+			$('#btn-sum').addClass('selected').removeClass('btn-common');
+			$('.submit-btn').addClass('selected').removeClass('btn-common');
+			$('.totalSum').text(selectedSum());
+			$('.commodityInfo').css({
+				'background-color':'#FFF8E1'
+			});
+		} else {
+			$store.prop('checked',false);
+			$tdInner.prop('checked',false);
+			$('.allSelected2').prop('checked',false);
+			$('.total-sum').text('0.00');
+			$('.total-symbol').text('0.00');
+			$('#btn-sum').removeClass('selected').addClass('btn-common');
+			$('.submit-btn').removeClass('selected').addClass('btn-common');
+			$('.totalSum').text('0');
+			$('.commodityInfo').css({
+				'background-color':'#fcfcfc'
+			});
+		}
+	});
+
+	$('.all-selected').on('click', '.allSelected2', function(event) {
+		if ($(this).prop('checked') === true) {
+			$store.prop('checked',true);
+			$tdInner.prop('checked',true);
+			$('.allSelected1').prop('checked',true);
+			$('.total-symbol').text(sumTotal() + '.00');
+			$('.total-sum').text(sumTotal() + '.00');
+			$('#btn-sum').addClass('selected').removeClass('btn-common');
+			$('.submit-btn').addClass('selected').removeClass('btn-common');
+			$('.totalSum').text(selectedSum());
+			$('.commodityInfo').css({
+				'background-color':'#FFF8E1'
+			});
+		} else {
+			$store.prop('checked',false);
+			$tdInner.prop('checked',false);
+			$('.allSelected1').prop('checked',false);
+			$('.total-symbol').text('0.00');
+			$('.total-sum').text('0.00');
+			$('#btn-sum').removeClass('selected').addClass('btn-common');
+			$('.submit-btn').removeClass('selected').addClass('btn-common');
+			$('.totalSum').text('0');
+			$('.commodityInfo').css({
+				'background-color':'#fcfcfc'
+			});
+		}
+	});
+
+
+	$('.shopMsg-input').click(function(event) {
+		var shopInfo = $(this).parents('.shopInfo').siblings('.commodityInfo');
+		var input = shopInfo.find('.td-inner input');
+		var allSelected1 = $('.allSelected1');
+		var allSelected2 = $('.allSelected2');
+		if ($(this).prop('checked')=== true) {
+			shopInfo.css({
+				'background-color':'#FFF8E1'
+			});
+			input.prop('checked',true);
+		} else {
+			shopInfo.css({
+				'background-color':'#fcfcfc'
+			});
+			input.prop('checked',false);
+			allSelected2.prop('chekced',false);
+			allSelected1.prop('checked',false);
+		}
+	});
+
+
 });
 
 
