@@ -148,6 +148,7 @@ $(document).ready(function() {
 			'color':'#444'
 		})
 		tdSum.text($text * num + '.00');
+		getCount();
 		return false;
 	});
 
@@ -163,6 +164,7 @@ $(document).ready(function() {
 			thisInput.find('input').val(num);
 		}
 		tdSum.text($text * num +' .00');
+		getCount();
 		return false;
 	});
 
@@ -176,93 +178,66 @@ $(document).ready(function() {
 		return $total;
 	}
 
-	//已选商品数量
-	function selectedSum(){
-		var sum = $('.td-inner').find('input').length;
-		return sum;
-	}
+	function getCount(){
+		var counts = 0;
+		var sum = 0;
+		$('.td-inner input').each(function(index, el) {
+			if ($(this).prop('checked')) {
+				for (var i = 0; i < $(this).length; i++) {
+					counts += parseInt($(this).parents('.td-chk').siblings('.td-sum').find('span').text());
+					sum += 1;
+				}
+			}
+		});
+		$('.totalSum').text(sum);
+		$('.total-sum').html((counts).toFixed(2));
+		$('.total-symbol').html((counts).toFixed(2));
+	};
 
-	//全选商品
-	var $store = $('.shopMsg').find('input[type="checkbox"]');
-	var $tdInner = $('.td-inner').find('input[type="checkbox"]');
 	$('.selectAll').on('click', '.allSelected1', function(event) {
-		if ($(this).prop('checked') === true) {
-			$store.prop('checked',true);
-			$tdInner.prop('checked',true);
-			$('.allSelected2').prop('checked',true);
-			$('.total-sum').text(sumTotal() + '.00');
-			$('.total-symbol').text(sumTotal() + '.00');
-			$('#btn-sum').addClass('selected').removeClass('btn-common');
-			$('.submit-btn').addClass('selected').removeClass('btn-common');
-			$('.totalSum').text(selectedSum());
+		if ($(this).prop('checked')) {
+			$(':checkbox').prop('checked',true);
 			$('.commodityInfo').css({
 				'background-color':'#FFF8E1'
 			});
 		} else {
-			$store.prop('checked',false);
-			$tdInner.prop('checked',false);
-			$('.allSelected2').prop('checked',false);
-			$('.total-sum').text('0.00');
-			$('.total-symbol').text('0.00');
-			$('#btn-sum').removeClass('selected').addClass('btn-common');
-			$('.submit-btn').removeClass('selected').addClass('btn-common');
-			$('.totalSum').text('0');
+			$(':checkbox').prop('checked',false);
 			$('.commodityInfo').css({
 				'background-color':'#fcfcfc'
-			});
+			})
 		}
+		getCount();
 	});
 
-	$('.all-selected').on('click', '.allSelected2', function(event) {
-		if ($(this).prop('checked') === true) {
-			$store.prop('checked',true);
-			$tdInner.prop('checked',true);
-			$('.allSelected1').prop('checked',true);
-			$('.total-symbol').text(sumTotal() + '.00');
-			$('.total-sum').text(sumTotal() + '.00');
-			$('#btn-sum').addClass('selected').removeClass('btn-common');
-			$('.submit-btn').addClass('selected').removeClass('btn-common');
-			$('.totalSum').text(selectedSum());
-			$('.commodityInfo').css({
-				'background-color':'#FFF8E1'
+	$('.td-inner input').click(function(event) {
+		if ($(this).prop('checked')) {
+			$(this).parents('.commodityInfo').siblings('.shopInfo').find('input').prop('checked',true);
+			$(this).parents('.commodityInfo').css({
+				'background-color':'#fff8e1'
 			});
+			getCount();
 		} else {
-			$store.prop('checked',false);
-			$tdInner.prop('checked',false);
-			$('.allSelected1').prop('checked',false);
-			$('.total-symbol').text('0.00');
-			$('.total-sum').text('0.00');
-			$('#btn-sum').removeClass('selected').addClass('btn-common');
-			$('.submit-btn').removeClass('selected').addClass('btn-common');
-			$('.totalSum').text('0');
-			$('.commodityInfo').css({
+			$(this).parents('.commodityInfo').siblings('.shopInfo').find('input').prop('checked',false);
+			$(this).parents('.commodityInfo').css({
 				'background-color':'#fcfcfc'
 			});
 		}
+		getCount();
 	});
 
-
-	$('.shopMsg-input').click(function(event) {
-		var shopInfo = $(this).parents('.shopInfo').siblings('.commodityInfo');
-		var input = shopInfo.find('.td-inner input');
-		var allSelected1 = $('.allSelected1');
-		var allSelected2 = $('.allSelected2');
-		if ($(this).prop('checked')=== true) {
-			shopInfo.css({
-				'background-color':'#FFF8E1'
+	$('.shopInfo input').click(function(event) {
+		if ($(this).prop('checked')) {
+			$(this).parents('.shopInfo').siblings('.commodityInfo').find('.td-inner input').prop('checked',true);
+			$(this).parents('.shopInfo').siblings('.commodityInfo').css({
+				'background-color':'#fff8e1'
 			});
-			input.prop('checked',true);
+			getCount();
 		} else {
-			shopInfo.css({
+			$(this).parents('.shopInfo').siblings('.commodityInfo').find('.td-inner input').prop('checked',false);
+			$(this).parents('.shopInfo').siblings('.commodityInfo').css({
 				'background-color':'#fcfcfc'
 			});
-			input.prop('checked',false);
-			allSelected2.prop('chekced',false);
-			allSelected1.prop('checked',false);
 		}
+		getCount();
 	});
-
-
 });
-
-
