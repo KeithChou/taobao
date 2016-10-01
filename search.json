@@ -1,88 +1,34 @@
 [
 	[
 		{
-			"Query":"a",
-			"FullResult":1,
+			"Query":"lan",
 			"Results":[
 				{
 					"Type":"AS",
 					"Suggests":[
 						{
-							"Txt":"爱奇艺",
-							"Url":"..."
+							"Txt":"Nike 耐克官方 ZOOM KOBE 男子篮球鞋 "
 						},
 						{
-							"Txt":"阿里巴巴",
-							"Url":"..."
+							"Txt":"adidas Regulate  篮球鞋 "
 						},
 						{
-							"Txt":"阿里旺旺",
-							"Url":"..."
+							"Txt":"李宁2016新款男子音速3高帮反弹篮球鞋"
 						},
 						{
-							"Txt":"阿里巴巴批发网",
-							"Url":"..."
+							"Txt":"李宁2016新款男子减震专业CBA魅影篮球鞋"
 						},
 						{
-							"Txt":"aiqiyi",
-							"Url":"..."
+							"Txt":"李宁男子专业篮球鞋CBA球迷空袭"
 						},
 						{
-							"Txt":"acfun",
-							"Url":"..."
+							"Txt":"adidas罗斯系列场上款篮球鞋"
 						},
 						{
-							"Txt":"阿里云",
-							"Url":"..."
+							"Txt":"adidas Boost 罗斯系列篮球鞋 JXO25 "
 						},
 						{
-							"Txt":"爱奇艺网",
-							"Url":"..."
-						}
-					]
-				}
-			]
-		}
-	],
-	[
-		{
-			"Query":"我",
-			"FullResult":1,
-			"Results":[
-				{
-					"Type":"AS",
-					"Suggests":[
-						{
-							"Txt":"我",
-							"Url":"..."
-						},
-						{
-							"Txt":"我的世界",
-							"Url":"..."
-						},
-						{
-							"Txt":"我要自学网",
-							"Url":"..."
-						},
-						{
-							"Txt":"我的世界下载",
-							"Url":"..."
-						},
-						{
-							"Txt":"我是歌手第四季",
-							"Url":"..."
-						},
-						{
-							"Txt":"我们相爱吧",
-							"Url":"..."
-						},
-						{
-							"Txt":"我们都爱笑",
-							"Url":"..."
-						},
-						{
-							"Txt":"我欲封天",
-							"Url":"..."
+							"Txt":"adidas场上款篮球鞋 D Rose 7 Primeknit"
 						}
 					]
 				}
