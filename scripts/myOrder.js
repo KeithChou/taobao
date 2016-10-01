@@ -306,7 +306,7 @@ $(document).ready(function() {
 							$html+='</li>';
 							$html+='<li class="td-operation">';
 								$html+='<p>';
-									$html+='<a href="#">删除</a>';
+									$html+='<a href="#" class="delete">删除</a>';
 								$html+='</p>';
 							$html+='</li>';
 						$html+='</ul>';
@@ -322,7 +322,6 @@ $(document).ready(function() {
 	//搜索购物车内存放的产品
 	$('.header-search button').click(function(event) {
 		shoppingCart();
-
 	});
 
 
