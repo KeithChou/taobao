@@ -54,14 +54,12 @@
 		<div class="container">
 			<div class="header">
 				<a href="#"></a>
-				<form action='' method='get'>
-					<div class="header-search">
-						<input type="text" placeholder="请输入内容" class='header-search-input' ><!--
-						--><button type='submit'>搜 索</button>
-						<div class="list">
-						</div>
+				<div class="header-search">
+					<input type="text" placeholder="请输入内容" class='header-search-input' autocomplete="off"><!--
+					--><button type='submit'>搜 索</button>
+					<div class="list">
 					</div>
-				</form>
+				</div>
 			</div>
 			<div class="content">
 				<div class="tbBar">
@@ -76,7 +74,7 @@
 						<li class='btn-switch-cart switch-cart-1'>
 							<a href="#" class="btn-switch-href btn-switch-color">
 								<em>降价商品</em>
-								<span class="number">1</span>
+								<span class="number">0</span>
 								<span class="pipe"></span>
 							</a>
 						</li>
@@ -92,7 +90,6 @@
 						<span>已选商品（不含运费）</span>
 						<strong class='price'>￥<!--
 							--><span class='total-symbol'>0.00</span>
-							
 						</strong>
 						<a href="#" class="submit-btn btn-common">结算</a>
 					</div>
@@ -103,7 +100,7 @@
 					<div class="commodityColumn">
 						<div class="th-chk">
 							<div id="selectAll" class="selectAll ">
-								<input type="checkbox" name="selectAllChckbox" id='selectAllChckbox' class='allSelected1'>
+								<input type="checkbox" name="selectAllChckbox" id='selectAllChckbox' class='allSelected1' autocomplete="off">
 								<label for="selectAllChckbox">全选</label>
 							</div>
 						</div>
@@ -128,562 +125,564 @@
 							<div class="td-inner">操作</div>
 						</div>
 					</div>
-					<div class="mainCommodity">
-						<div class="shopInfo">
-							<div class="shopMsg">
-									<input type="checkbox" name="shopMsg" id='shopMsg' class='shopMsg-input'>
-									<label for="shopMsg">店铺：
-								<a href="#">生如海洋 men sho</a>
+					<div class='commodityContainer'>
+						<div class="mainCommodity">
+							<div class="shopInfo">
+								<div class="shopMsg">
+										<input type="checkbox" name="shopMsg" id='shopMsg' class='shopMsg-input' autocomplete="off">
+										<label for="shopMsg">店铺：
+									<a href="#">生如海洋 men sho</a>
+								</div>
 							</div>
-						</div>
-						<div class="commodityInfo">
-							<ul>
-								<li class='td-chk'>
-									<div class="td-inner">
-										<input type="checkbox" name='checkbox'>
-									</div>
-								</li>
-								<li class='td-item'>
-									<div class="td-inner">
-										<a href="#" class='desImg'>
-											<img src="css/images/boyShoes.png" alt='夏日拖鞋潮男韩版潮流男士一字拖防滑凉鞋夏天个性沙滩潮拖凉拖男'>
-										</a>
-										<div class="item-info">
-											<div class="item-basis-info">
-												<a href="#">夏日拖鞋潮男韩版潮流男士一字拖防滑凉鞋夏天个性沙滩潮拖凉拖男</a>
-											</div>
-											<div class="item-other-info">
-												<div class="item-other-space"></div>
-												<div class="item-other-list">
-													<a href="#" title='支持信用卡支付'>
-														<img src="css/images/bankCard.png" alt="支持信用卡支付">
-													</a>
-													<a href="#" class='sevenDay' title='7天无理由'>
-														<img src="css/images/sevenDay.png" alt="7天无理由">
-													</a>
-													<a href="#" title='消费者保障服务'>
-														<img src="css/images/guarantee.png" alt="消费者保障服务">
-													</a>
+							<div class="commodityInfo">
+								<ul>
+									<li class='td-chk'>
+										<div class="td-inner">
+											<input type="checkbox" name='checkbox' autocomplete="off" >
+										</div>
+									</li>
+									<li class='td-item'>
+										<div class="td-inner">
+											<a href="#" class='desImg'>
+												<img src="css/images/boyShoes.png" alt='夏日拖鞋潮男韩版潮流男士一字拖防滑凉鞋夏天个性沙滩潮拖凉拖男'>
+											</a>
+											<div class="item-info">
+												<div class="item-basis-info">
+													<a href="#">夏日拖鞋潮男韩版潮流男士一字拖防滑凉鞋夏天个性沙滩潮拖凉拖男</a>
+												</div>
+												<div class="item-other-info">
+													<div class="item-other-space"></div>
+													<div class="item-other-list">
+														<a href="#" title='支持信用卡支付'>
+															<img src="css/images/bankCard.png" alt="支持信用卡支付">
+														</a>
+														<a href="#" class='sevenDay' title='7天无理由'>
+															<img src="css/images/sevenDay.png" alt="7天无理由">
+														</a>
+														<a href="#" title='消费者保障服务'>
+															<img src="css/images/guarantee.png" alt="消费者保障服务">
+														</a>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-								</li>
-								<li class='td-info'>
-									<div class="td-info-msg">
-										<p>颜色分类：028黑蜂窝</p>
-										<p>尺码：41</p>
-									</div>
-								</li>
-								<li class='td-price'>
-									<div class="td-inner">
-										<p class='non-discount'>￥79.00</p>
-										<p class='discount'>￥<span>49.00</span></p>
-										<div class="promotion">
-											卖家促销
-											<i class='promotionIcon'></i>
+									</li>
+									<li class='td-info'>
+										<div class="td-info-msg">
+											<p>颜色分类：028黑蜂窝</p>
+											<p>尺码：41</p>
 										</div>
-										<div class="proSlidedown">
-											<p class='newPro'>卖家促销：新品大特价</p>
-											<p>优惠：￥30.00</p>
+									</li>
+									<li class='td-price'>
+										<div class="td-inner">
+											<p class='non-discount'>￥79.00</p>
+											<p class='discount'>￥<span>49.00</span></p>
+											<div class="promotion">
+												卖家促销
+												<i class='promotionIcon'></i>
+											</div>
+											<div class="proSlidedown">
+												<p class='newPro'>卖家促销：新品大特价</p>
+												<p>优惠：￥30.00</p>
+											</div>
 										</div>
-									</div>
-								</li>
-								<li class='td-amount'>
-									<div class="item-amount">
-										<a href="#" class='amount-left amount-color'>-</a>
-										<input type="text" name='amountNum' value='1' autocomplete="off">
-										<a href="#" class="amount-right">+</a>
-									</div>
-	 							</li>
-								<li class='td-sum'>
-									<em>￥</em><!--
-									--><span>49.00</span>
-								</li>
-								<li class='td-operation'>
-									<p><a href="#">删除</a></p>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="mainCommodity">
-						<div class="shopInfo">
-							<div class="shopMsg">
-								<input type="checkbox" name="shopMsg" id='fashionClo' class='shopMsg-input'>
-								<label for="fashionClo">店铺：</label>
-								<a href="#">nixu服饰旗舰店</a>
+									</li>
+									<li class='td-amount'>
+										<div class="item-amount">
+											<a href="#" class='amount-left amount-color'>-</a>
+											<input type="text" name='amountNum' value='1' autocomplete="off">
+											<a href="#" class="amount-right">+</a>
+										</div>
+		 							</li>
+									<li class='td-sum'>
+										<em>￥</em><!--
+										--><span>49.00</span>
+									</li>
+									<li class='td-operation'>
+										<p><a href="#" class='delete'>删除</a></p>
+									</li>
+								</ul>
 							</div>
 						</div>
-						<div class="commodityInfo">
-							<ul>
-								<li class='td-chk'>
-									<div class="td-inner">
-										<input type="checkbox" name='checkbox'>
-									</div>
-								</li>
-								<li class='td-item'>
-									<div class="td-inner">
-										<a href="#" class='desImg'>
-											<img src="css/images/fashionClo.png" alt='韩版中长款纯色休闲青年风衣英伦秋冬男毛呢料宽松外套时尚大衣'>
-										</a>
-										<div class="item-info">
-											<div class="item-basis-info">
-												<a href="#">
-													韩版中长款纯色休闲青年风衣英伦秋冬男毛呢料宽松外套时尚大衣
-												</a>
-											</div>
-											<div class="item-other-info">
-												<div class="item-other-space"></div>
-												<div class="item-other-list">
-													<a href="#" title='支持信用卡支付'>
-														<img src="css/images/bankCard.png" alt="支持信用卡支付">
+						<div class="mainCommodity">
+							<div class="shopInfo">
+								<div class="shopMsg">
+									<input type="checkbox" name="shopMsg" id='fashionClo' class='shopMsg-input' autocomplete="off">
+									<label for="fashionClo">店铺：</label>
+									<a href="#">nixu服饰旗舰店</a>
+								</div>
+							</div>
+							<div class="commodityInfo">
+								<ul>
+									<li class='td-chk'>
+										<div class="td-inner">
+											<input type="checkbox" name='checkbox' autocomplete="off">
+										</div>
+									</li>
+									<li class='td-item'>
+										<div class="td-inner">
+											<a href="#" class='desImg'>
+												<img src="css/images/fashionClo.png" alt='韩版中长款纯色休闲青年风衣英伦秋冬男毛呢料宽松外套时尚大衣'>
+											</a>
+											<div class="item-info">
+												<div class="item-basis-info">
+													<a href="#">
+														韩版中长款纯色休闲青年风衣英伦秋冬男毛呢料宽松外套时尚大衣
 													</a>
-													<a href="#" class='sevenDay' title='7天无理由'>
-														<img src="css/images/sevenDay.png" alt="7天无理由">
-													</a>
-													<a href="#" title='消费者保障服务'>
-														<img src="css/images/guarantee.png" alt="消费者保障服务">
-													</a>
+												</div>
+												<div class="item-other-info">
+													<div class="item-other-space"></div>
+													<div class="item-other-list">
+														<a href="#" title='支持信用卡支付'>
+															<img src="css/images/bankCard.png" alt="支持信用卡支付">
+														</a>
+														<a href="#" class='sevenDay' title='7天无理由'>
+															<img src="css/images/sevenDay.png" alt="7天无理由">
+														</a>
+														<a href="#" title='消费者保障服务'>
+															<img src="css/images/guarantee.png" alt="消费者保障服务">
+														</a>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-								</li>
-								<li class='td-info'>
-									<div class="td-info-msg">
-										<p>颜色：卡其色有纽扣</p>
-										<p>尺码：L</p>
-									</div>
-								</li>
-								<li class='td-price'>
-									<div class="td-inner">
-										<p class='non-discount'>￥416.00</p>
-										<p class='discount'>￥<span>208.00</span></p>
-										<div class="promotion">
-											卖家促销
-											<i class='promotionIcon'></i>
+									</li>
+									<li class='td-info'>
+										<div class="td-info-msg">
+											<p>颜色：卡其色有纽扣</p>
+											<p>尺码：L</p>
 										</div>
-										<div class="proSlidedown">
-											<p class='newPro'>卖家促销：新品优惠</p>
-											<p>优惠：￥208.00</p>
+									</li>
+									<li class='td-price'>
+										<div class="td-inner">
+											<p class='non-discount'>￥416.00</p>
+											<p class='discount'>￥<span>208.00</span></p>
+											<div class="promotion">
+												卖家促销
+												<i class='promotionIcon'></i>
+											</div>
+											<div class="proSlidedown">
+												<p class='newPro'>卖家促销：新品优惠</p>
+												<p>优惠：￥208.00</p>
+											</div>
 										</div>
-									</div>
-								</li>
-								<li class='td-amount'>
-									<div class="item-amount">
-										<a href="#" class='amount-left amount-color'>-</a>
-										<input type="text" name='amountNum' value='1' autocomplete="off">
-										<a href="#" class="amount-right">+</a>
-									</div>
-	 							</li>
-								<li class='td-sum'>
-									<em>￥</em><!--
-									--><span>208.00</span>
-								</li>
-								<li class='td-operation'>
-									<p><a href="#">删除</a></p>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="mainCommodity">
-						<div class="shopInfo">
-							<div class="shopMsg">
-								<input type="checkbox" name="shopMsg" id='liningBas' class='shopMsg-input'>
-								<label for="liningBas">店铺：</label>
-								<a href="#">李宁官方网店</a>
+									</li>
+									<li class='td-amount'>
+										<div class="item-amount">
+											<a href="#" class='amount-left amount-color'>-</a>
+											<input type="text" name='amountNum' value='1' autocomplete="off">
+											<a href="#" class="amount-right">+</a>
+										</div>
+		 							</li>
+									<li class='td-sum'>
+										<em>￥</em><!--
+										--><span>208.00</span>
+									</li>
+									<li class='td-operation'>
+										<p><a href="#" class='delete'>删除</a></p>
+									</li>
+								</ul>
 							</div>
 						</div>
-						<div class="commodityInfo">
-							<ul>
-								<li class='td-chk'>
-									<div class="td-inner">
-										<input type="checkbox" name='checkbox'>
-									</div>
-								</li>
-								<li class='td-item'>
-									<div class="td-inner">
-										<a href="#" class='desImg'>
-											<img src="css/images/lining-bas.png" alt='李宁2016新款男子篮球鞋音速3高帮反弹篮球场地鞋ABAL031'>
-										</a>
-										<div class="item-info">
-											<div class="item-basis-info">
-												<a href="#">
-													李宁2016新款男子篮球鞋音速3高帮反弹篮球场地鞋ABAL031
-												</a>
-											</div>
-											<div class="item-other-info">
-												<div class="item-other-space"></div>
-												<div class="item-other-list">
-													<a href="#" title='支持信用卡支付'>
-														<img src="css/images/bankCard.png" alt="支持信用卡支付">
+						<div class="mainCommodity">
+							<div class="shopInfo">
+								<div class="shopMsg">
+									<input type="checkbox" name="shopMsg" id='liningBas' class='shopMsg-input' autocomplete="off">
+									<label for="liningBas">店铺：</label>
+									<a href="#">李宁官方网店</a>
+								</div>
+							</div>
+							<div class="commodityInfo">
+								<ul>
+									<li class='td-chk'>
+										<div class="td-inner">
+											<input type="checkbox" name='checkbox' autocomplete="off">
+										</div>
+									</li>
+									<li class='td-item'>
+										<div class="td-inner">
+											<a href="#" class='desImg'>
+												<img src="css/images/lining-bas.png" alt='李宁2016新款男子篮球鞋音速3高帮反弹篮球场地鞋ABAL031'>
+											</a>
+											<div class="item-info">
+												<div class="item-basis-info">
+													<a href="#">
+														李宁2016新款男子篮球鞋音速3高帮反弹篮球场地鞋ABAL031
 													</a>
-													<a href="#" class='sevenDay' title='7天无理由'>
-														<img src="css/images/sevenDay.png" alt="7天无理由">
-													</a>
-													<a href="#" title='消费者保障服务'>
-														<img src="css/images/guarantee.png" alt="消费者保障服务">
-													</a>
+												</div>
+												<div class="item-other-info">
+													<div class="item-other-space"></div>
+													<div class="item-other-list">
+														<a href="#" title='支持信用卡支付'>
+															<img src="css/images/bankCard.png" alt="支持信用卡支付">
+														</a>
+														<a href="#" class='sevenDay' title='7天无理由'>
+															<img src="css/images/sevenDay.png" alt="7天无理由">
+														</a>
+														<a href="#" title='消费者保障服务'>
+															<img src="css/images/guarantee.png" alt="消费者保障服务">
+														</a>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-								</li>
-								<li class='td-info'>
-									<div class="td-info-msg">
-										<p>颜色分类：荧光果粉/木梅红</p>
-										<p>鞋码：42</p>
-									</div>
-								</li>
-								<li class='td-price'>
-									<div class="td-inner">
-										<p class='non-discount'>￥539.00</p>
-										<p class='discount'>￥<span>339.00</span></p>
-										<div class="promotion">
-											卖家促销
-											<i class='promotionIcon'></i>
+									</li>
+									<li class='td-info'>
+										<div class="td-info-msg">
+											<p>颜色分类：荧光果粉/木梅红</p>
+											<p>鞋码：42</p>
 										</div>
-										<div class="proSlidedown">
-											<p class='newPro'>卖家促销：秋季特惠</p>
-											<p>优惠：￥200.00</p>
+									</li>
+									<li class='td-price'>
+										<div class="td-inner">
+											<p class='non-discount'>￥539.00</p>
+											<p class='discount'>￥<span>339.00</span></p>
+											<div class="promotion">
+												卖家促销
+												<i class='promotionIcon'></i>
+											</div>
+											<div class="proSlidedown">
+												<p class='newPro'>卖家促销：秋季特惠</p>
+												<p>优惠：￥200.00</p>
+											</div>
 										</div>
-									</div>
-								</li>
-								<li class='td-amount'>
-									<div class="item-amount">
-										<a href="#" class='amount-left amount-color'>-</a>
-										<input type="text" name='amountNum' value='1' autocomplete="off">
-										<a href="#" class="amount-right">+</a>
-									</div>
-	 							</li>
-								<li class='td-sum'>
-									<em>￥</em><!--
-									--><span>339.00</span>
-								</li>
-								<li class='td-operation'>
-									<p><a href="#">删除</a></p>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="mainCommodity">
-						<div class="shopInfo">
-							<div class="shopMsg">
-								<input type="checkbox" name="shopMsg" id='adidas' class='shopMsg-input'>
-								<label for="adidas">店铺：</label>
-								<a href="#">adidas官方旗舰店</a>
+									</li>
+									<li class='td-amount'>
+										<div class="item-amount">
+											<a href="#" class='amount-left amount-color'>-</a>
+											<input type="text" name='amountNum' value='1' autocomplete="off">
+											<a href="#" class="amount-right">+</a>
+										</div>
+		 							</li>
+									<li class='td-sum'>
+										<em>￥</em><!--
+										--><span>339.00</span>
+									</li>
+									<li class='td-operation'>
+										<p><a href="#" class='delete'>删除</a></p>
+									</li>
+								</ul>
 							</div>
 						</div>
-						<div class="commodityInfo">
-							<ul>
-								<li class='td-chk'>
-									<div class="td-inner">
-										<input type="checkbox" name='checkbox'>
-									</div>
-								</li>
-								<li class='td-item'>
-									<div class="td-inner">
-										<a href="#" class='desImg'>
-											<img src="css/images/adidas.png" alt='adidas 阿迪达斯 篮球 男子 篮球鞋 Regulate'>
-										</a>
-										<div class="item-info">
-											<div class="item-basis-info">
-												<a href="#">
-													adidas 阿迪达斯 篮球 男子 篮球鞋 Regulate
-												</a>
-											</div>
-											<div class="item-other-info">
-												<div class="item-other-space"></div>
-												<div class="item-other-list">
-													<a href="#" title='支持信用卡支付'>
-														<img src="css/images/bankCard.png" alt="支持信用卡支付">
+						<div class="mainCommodity">
+							<div class="shopInfo">
+								<div class="shopMsg">
+									<input type="checkbox" name="shopMsg" id='adidas' class='shopMsg-input' autocomplete="off">
+									<label for="adidas">店铺：</label>
+									<a href="#">adidas官方旗舰店</a>
+								</div>
+							</div>
+							<div class="commodityInfo">
+								<ul>
+									<li class='td-chk'>
+										<div class="td-inner">
+											<input type="checkbox" name='checkbox' autocomplete="off">
+										</div>
+									</li>
+									<li class='td-item'>
+										<div class="td-inner">
+											<a href="#" class='desImg'>
+												<img src="css/images/adidas.png" alt='adidas 阿迪达斯 篮球 男子 篮球鞋 Regulate'>
+											</a>
+											<div class="item-info">
+												<div class="item-basis-info">
+													<a href="#">
+														adidas 阿迪达斯 篮球 男子 篮球鞋 Regulate
 													</a>
-													<a href="#" class='sevenDay' title='7天无理由'>
-														<img src="css/images/sevenDay.png" alt="7天无理由">
-													</a>
-													<a href="#" title='消费者保障服务'>
-														<img src="css/images/guarantee.png" alt="消费者保障服务">
-													</a>
+												</div>
+												<div class="item-other-info">
+													<div class="item-other-space"></div>
+													<div class="item-other-list">
+														<a href="#" title='支持信用卡支付'>
+															<img src="css/images/bankCard.png" alt="支持信用卡支付">
+														</a>
+														<a href="#" class='sevenDay' title='7天无理由'>
+															<img src="css/images/sevenDay.png" alt="7天无理由">
+														</a>
+														<a href="#" title='消费者保障服务'>
+															<img src="css/images/guarantee.png" alt="消费者保障服务">
+														</a>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-								</li>
-								<li class='td-info'>
-									<div class="td-info-msg">
-										<p>颜色分类：银金属/深藏青蓝/红色</p>
-										<p>鞋码：43.5</p>
-									</div>
-								</li>
-								<li class='td-price'>
-									<div class="td-inner">
-										<p class='discount'>￥<span>419.00</span></p>
-										<div class="proSlidedown">
-											<p class='newPro'>卖家促销：新品大特价</p>
-											<p>优惠：￥30.00</p>
+									</li>
+									<li class='td-info'>
+										<div class="td-info-msg">
+											<p>颜色分类：银金属/深藏青蓝/红色</p>
+											<p>鞋码：43.5</p>
 										</div>
-									</div>
-								</li>
-								<li class='td-amount'>
-									<div class="item-amount">
-										<a href="#" class='amount-left amount-color'>-</a>
-										<input type="text" name='amountNum' value='1' autocomplete="off">
-										<a href="#" class="amount-right">+</a>
-									</div>
-	 							</li>
-								<li class='td-sum'>
-									<em>￥</em><!--
-									--><span>208.00</span>
-								</li>
-								<li class='td-operation'>
-									<p><a href="#">删除</a></p>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="mainCommodity">
-						<div class="shopInfo">
-							<div class="shopMsg">
-								<input type="checkbox" name="shopMsg" id='nike' class='shopMsg-input'>
-								<label for="nike">店铺：</label>
-								<a href="#">NIKE官方旗舰店</a>
+									</li>
+									<li class='td-price'>
+										<div class="td-inner">
+											<p class='discount'>￥<span>419.00</span></p>
+											<div class="proSlidedown">
+												<p class='newPro'>卖家促销：新品大特价</p>
+												<p>优惠：￥30.00</p>
+											</div>
+										</div>
+									</li>
+									<li class='td-amount'>
+										<div class="item-amount">
+											<a href="#" class='amount-left amount-color'>-</a>
+											<input type="text" name='amountNum' value='1' autocomplete="off">
+											<a href="#" class="amount-right">+</a>
+										</div>
+		 							</li>
+									<li class='td-sum'>
+										<em>￥</em><!--
+										--><span>208.00</span>
+									</li>
+									<li class='td-operation'>
+										<p><a href="#" class='delete'>删除</a></p>
+									</li>
+								</ul>
 							</div>
 						</div>
-						<div class="commodityInfo">
-							<ul>
-								<li class='td-chk'>
-									<div class="td-inner">
-										<input type="checkbox" name='checkbox'>
-									</div>
-								</li>
-								<li class='td-item'>
-									<div class="td-inner">
-										<a href="#" class='desImg'>
-											<img src="css/images/maozi.png" alt='Nike 耐克官方 ZOOM KOBE VENOMENON 5 EP 男子篮球鞋'>
-										</a>
-										<div class="item-info">
-											<div class="item-basis-info">
-												<a href="#">
-													Nike 耐克官方 ZOOM KOBE VENOMENON 5 EP 男子篮球鞋
-												</a>
-											</div>
-											<div class="item-other-info">
-												<div class="item-other-space"></div>
-												<div class="item-other-list">
-													<a href="#" title='支持信用卡支付'>
-														<img src="css/images/bankCard.png" alt="支持信用卡支付">
+						<div class="mainCommodity">
+							<div class="shopInfo">
+								<div class="shopMsg">
+									<input type="checkbox" name="shopMsg" id='nike' class='shopMsg-input' autocomplete="off">
+									<label for="nike">店铺：</label>
+									<a href="#">NIKE官方旗舰店</a>
+								</div>
+							</div>
+							<div class="commodityInfo">
+								<ul>
+									<li class='td-chk'>
+										<div class="td-inner">
+											<input type="checkbox" name='checkbox' autocomplete="off">
+										</div>
+									</li>
+									<li class='td-item'>
+										<div class="td-inner">
+											<a href="#" class='desImg'>
+												<img src="css/images/maozi.png" alt='Nike 耐克官方 ZOOM KOBE VENOMENON 5 EP 男子篮球鞋'>
+											</a>
+											<div class="item-info">
+												<div class="item-basis-info">
+													<a href="#">
+														Nike 耐克官方 ZOOM KOBE VENOMENON 5 EP 男子篮球鞋
 													</a>
-													<a href="#" class='sevenDay' title='7天无理由'>
-														<img src="css/images/sevenDay.png" alt="7天无理由">
-													</a>
-													<a href="#" title='消费者保障服务'>
-														<img src="css/images/guarantee.png" alt="消费者保障服务">
-													</a>
+												</div>
+												<div class="item-other-info">
+													<div class="item-other-space"></div>
+													<div class="item-other-list">
+														<a href="#" title='支持信用卡支付'>
+															<img src="css/images/bankCard.png" alt="支持信用卡支付">
+														</a>
+														<a href="#" class='sevenDay' title='7天无理由'>
+															<img src="css/images/sevenDay.png" alt="7天无理由">
+														</a>
+														<a href="#" title='消费者保障服务'>
+															<img src="css/images/guarantee.png" alt="消费者保障服务">
+														</a>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-								</li>
-								<li class='td-info'>
-									<div class="td-info-msg">
-										<p>颜色分类：氯蓝/鲜红橙/煤黑/白/冷灰黑</p>
-										<p>鞋码：42.5</p>
-									</div>
-								</li>
-								<li class='td-price'>
-									<div class="td-inner">
-										<p class='discount'>￥<span>949.00</span></p>
-										<div class="proSlidedown">
-											<p class='newPro'>卖家促销：新品大特价</p>
-											<p>优惠：￥30.00</p>
+									</li>
+									<li class='td-info'>
+										<div class="td-info-msg">
+											<p>颜色分类：氯蓝/鲜红橙/煤黑/白/冷灰黑</p>
+											<p>鞋码：42.5</p>
 										</div>
-									</div>
-								</li>
-								<li class='td-amount'>
-									<div class="item-amount">
-										<a href="#" class='amount-left amount-color'>-</a>
-										<input type="text" name='amountNum' value='1' autocomplete="off">
-										<a href="#" class="amount-right">+</a>
-									</div>
-	 							</li>
-								<li class='td-sum'>
-									<em>￥</em><!--
-									--><span>949.00</span>
-								</li>
-								<li class='td-operation'>
-									<p><a href="#">删除</a></p>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="mainCommodity">
-						<div class="shopInfo">
-							<div class="shopMsg">
-								<input type="checkbox" name="shopMsg" id='xuezi' class='shopMsg-input'>
-								<label for="xuezi">店铺：</label>
-								<a href="#">zsuo走索旗舰店</a>
+									</li>
+									<li class='td-price'>
+										<div class="td-inner">
+											<p class='discount'>￥<span>949.00</span></p>
+											<div class="proSlidedown">
+												<p class='newPro'>卖家促销：新品大特价</p>
+												<p>优惠：￥30.00</p>
+											</div>
+										</div>
+									</li>
+									<li class='td-amount'>
+										<div class="item-amount">
+											<a href="#" class='amount-left amount-color'>-</a>
+											<input type="text" name='amountNum' value='1' autocomplete="off">
+											<a href="#" class="amount-right">+</a>
+										</div>
+		 							</li>
+									<li class='td-sum'>
+										<em>￥</em><!--
+										--><span>949.00</span>
+									</li>
+									<li class='td-operation'>
+										<p><a href="#" class='delete'>删除</a></p>
+									</li>
+								</ul>
 							</div>
 						</div>
-						<div class="commodityInfo">
-							<ul>
-								<li class='td-chk'>
-									<div class="td-inner">
-										<input type="checkbox" name='checkbox'>
-									</div>
-								</li>
-								<li class='td-item'>
-									<div class="td-inner">
-										<a href="#" class='desImg'>
-											<img src="css/images/xuezi.png" alt='Z．Suo/走索男鞋马丁靴男秋冬户外靴子沙漠靴男军靴皮靴情侣款潮'>
-										</a>
-										<div class="item-info">
-											<div class="item-basis-info">
-												<a href="#">
-													Z．Suo/走索男鞋马丁靴男秋冬户外靴子沙漠靴男军靴皮靴情侣款潮
-												</a>
-											</div>
-											<div class="item-other-info">
-												<div class="item-other-space"></div>
-												<div class="item-other-list">
-													<a href="#" title='支持信用卡支付'>
-														<img src="css/images/bankCard.png" alt="支持信用卡支付">
+						<div class="mainCommodity">
+							<div class="shopInfo">
+								<div class="shopMsg">
+									<input type="checkbox" name="shopMsg" id='xuezi' class='shopMsg-input' autocomplete="off">
+									<label for="xuezi">店铺：</label>
+									<a href="#">zsuo走索旗舰店</a>
+								</div>
+							</div>
+							<div class="commodityInfo">
+								<ul>
+									<li class='td-chk'>
+										<div class="td-inner">
+											<input type="checkbox" name='checkbox' autocomplete="off">
+										</div>
+									</li>
+									<li class='td-item'>
+										<div class="td-inner">
+											<a href="#" class='desImg'>
+												<img src="css/images/xuezi.png" alt='Z．Suo/走索男鞋马丁靴男秋冬户外靴子沙漠靴男军靴皮靴情侣款潮'>
+											</a>
+											<div class="item-info">
+												<div class="item-basis-info">
+													<a href="#">
+														Z．Suo/走索男鞋马丁靴男秋冬户外靴子沙漠靴男军靴皮靴情侣款潮
 													</a>
-													<a href="#" class='sevenDay' title='7天无理由'>
-														<img src="css/images/sevenDay.png" alt="7天无理由">
-													</a>
-													<a href="#" title='消费者保障服务'>
-														<img src="css/images/guarantee.png" alt="消费者保障服务">
-													</a>
+												</div>
+												<div class="item-other-info">
+													<div class="item-other-space"></div>
+													<div class="item-other-list">
+														<a href="#" title='支持信用卡支付'>
+															<img src="css/images/bankCard.png" alt="支持信用卡支付">
+														</a>
+														<a href="#" class='sevenDay' title='7天无理由'>
+															<img src="css/images/sevenDay.png" alt="7天无理由">
+														</a>
+														<a href="#" title='消费者保障服务'>
+															<img src="css/images/guarantee.png" alt="消费者保障服务">
+														</a>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-								</li>
-								<li class='td-info'>
-									<div class="td-info-msg">
-										<p>颜色分类：ZS988H黑色</p>
-										<p>尺码：42</p>
-									</div>
-								</li>
-								<li class='td-price'>
-									<div class="td-inner">
-										<p class='non-discount'>￥452.00</p>
-										<p class='discount'>￥<span>239.00</span></p>
-										<div class="promotion">
-											卖家促销
-											<i class='promotionIcon'></i>
+									</li>
+									<li class='td-info'>
+										<div class="td-info-msg">
+											<p>颜色分类：ZS988H黑色</p>
+											<p>尺码：42</p>
 										</div>
-										<div class="proSlidedown">
-											<p class='newPro'>卖家促销：火热抢购中</p>
-											<p>优惠：￥213.00</p>
+									</li>
+									<li class='td-price'>
+										<div class="td-inner">
+											<p class='non-discount'>￥452.00</p>
+											<p class='discount'>￥<span>239.00</span></p>
+											<div class="promotion">
+												卖家促销
+												<i class='promotionIcon'></i>
+											</div>
+											<div class="proSlidedown">
+												<p class='newPro'>卖家促销：火热抢购中</p>
+												<p>优惠：￥213.00</p>
+											</div>
 										</div>
-									</div>
-								</li>
-								<li class='td-amount'>
-									<div class="item-amount">
-										<a href="#" class='amount-left amount-color'>-</a>
-										<input type="text" name='amountNum' value='1' autocomplete="off">
-										<a href="#" class="amount-right">+</a>
-									</div>
-	 							</li>
-								<li class='td-sum'>
-									<em>￥</em><!--
-									--><span>239.00</span>
-								</li>
-								<li class='td-operation'>
-									<p><a href="#">删除</a></p>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="mainCommodity">
-						<div class="shopInfo">
-							<div class="shopMsg">
-								<input type="checkbox" name="shopMsg" id='zhangjunyameimei' class='shopMsg-input'>
-								<label for="zhangjunyameimei">店铺：</label>
-								<a href="#">张君雅小妹妹旗舰</a>
+									</li>
+									<li class='td-amount'>
+										<div class="item-amount">
+											<a href="#" class='amount-left amount-color'>-</a>
+											<input type="text" name='amountNum' value='1' autocomplete="off">
+											<a href="#" class="amount-right">+</a>
+										</div>
+		 							</li>
+									<li class='td-sum'>
+										<em>￥</em><!--
+										--><span>239.00</span>
+									</li>
+									<li class='td-operation'>
+										<p><a href="#" class='delete'>删除</a></p>
+									</li>
+								</ul>
 							</div>
 						</div>
-						<div class="commodityInfo">
-							<ul>
-								<li class='td-chk'>
-									<div class="td-inner">
-										<input type="checkbox" name='checkbox'>
-									</div>
-								</li>
-								<li class='td-item'>
-									<div class="td-inner">
-										<a href="#" class='desImg'>
-											<img src="css/images/zhangjunyameimei.png" alt='台湾进口零食张君雅小妹妹12包零食组合甜甜圈捏脆面点心面礼包'>
-										</a>
-										<div class="item-info">
-											<div class="item-basis-info">
-												<a href="#">
-													台湾进口零食张君雅小妹妹12包零食组合甜甜圈捏脆面点心面礼包
-												</a>
-											</div>
-											<div class="item-other-info">
-												<div class="item-other-space"></div>
-												<div class="item-other-list">
-													<a href="#" title='支持信用卡支付'>
-														<img src="css/images/bankCard.png" alt="支持信用卡支付">
+						<div class="mainCommodity">
+							<div class="shopInfo">
+								<div class="shopMsg">
+									<input type="checkbox" name="shopMsg" id='zhangjunyameimei' class='shopMsg-input' autocomplete="off">
+									<label for="zhangjunyameimei">店铺：</label>
+									<a href="#">张君雅小妹妹旗舰</a>
+								</div>
+							</div>
+							<div class="commodityInfo">
+								<ul>
+									<li class='td-chk'>
+										<div class="td-inner">
+											<input type="checkbox" name='checkbox' autocomplete="off">
+										</div>
+									</li>
+									<li class='td-item'>
+										<div class="td-inner">
+											<a href="#" class='desImg'>
+												<img src="css/images/zhangjunyameimei.png" alt='台湾进口零食张君雅小妹妹12包零食组合甜甜圈捏脆面点心面礼包'>
+											</a>
+											<div class="item-info">
+												<div class="item-basis-info">
+													<a href="#">
+														台湾进口零食张君雅小妹妹12包零食组合甜甜圈捏脆面点心面礼包
 													</a>
-													<a href="#" class='sevenDay' title='7天无理由'>
-														<img src="css/images/sevenDay.png" alt="7天无理由">
-													</a>
-													<a href="#" title='消费者保障服务'>
-														<img src="css/images/guarantee.png" alt="消费者保障服务">
-													</a>
+												</div>
+												<div class="item-other-info">
+													<div class="item-other-space"></div>
+													<div class="item-other-list">
+														<a href="#" title='支持信用卡支付'>
+															<img src="css/images/bankCard.png" alt="支持信用卡支付">
+														</a>
+														<a href="#" class='sevenDay' title='7天无理由'>
+															<img src="css/images/sevenDay.png" alt="7天无理由">
+														</a>
+														<a href="#" title='消费者保障服务'>
+															<img src="css/images/guarantee.png" alt="消费者保障服务">
+														</a>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-								</li>
-								<li class='td-info'>
-									<div class="td-info-msg">
-										<p>口味：12包零食组合</p>
-									</div>
-								</li>
-								<li class='td-price'>
-									<div class="td-inner">
-										<p class='non-discount'>￥79.00</p>
-										<p class='discount'>￥<span>39.00</span></p>
-										<div class="promotion">
-											卖家促销
-											<i class='promotionIcon'></i>
+									</li>
+									<li class='td-info'>
+										<div class="td-info-msg">
+											<p>口味：12包零食组合</p>
 										</div>
-										<div class="proSlidedown">
-											<p class='newPro'>卖家促销：9月狂欢购</p>
-											<p>优惠：￥40.00</p>
+									</li>
+									<li class='td-price'>
+										<div class="td-inner">
+											<p class='non-discount'>￥79.00</p>
+											<p class='discount'>￥<span>39.00</span></p>
+											<div class="promotion">
+												卖家促销
+												<i class='promotionIcon'></i>
+											</div>
+											<div class="proSlidedown">
+												<p class='newPro'>卖家促销：9月狂欢购</p>
+												<p>优惠：￥40.00</p>
+											</div>
 										</div>
-									</div>
-								</li>
-								<li class='td-amount'>
-									<div class="item-amount">
-										<a href="#" class='amount-left amount-color'>-</a>
-										<input type="text" name='amountNum' value='1' autocomplete="off">
-										<a href="#" class="amount-right">+</a>
-									</div>
-	 							</li>
-								<li class='td-sum'>
-									<em>￥</em><!--
-									--><span>39.00</span>
-								</li>
-								<li class='td-operation'>
-									<p><a href="#">删除</a></p>
-								</li>
-							</ul>
+									</li>
+									<li class='td-amount'>
+										<div class="item-amount">
+											<a href="#" class='amount-left amount-color'>-</a>
+											<input type="text" name='amountNum' value='1' autocomplete="off">
+											<a href="#" class="amount-right">+</a>
+										</div>
+		 							</li>
+									<li class='td-sum'>
+										<em>￥</em><!--
+										--><span>39.00</span>
+									</li>
+									<li class='td-operation'>
+										<p><a href="#" class='delete'>删除</a></p>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="footer">
 				<div class="all-selected">
-					<input type="checkbox" name='all-selected' id='all-selected' class='allSelected2'>
+					<input type="checkbox" name='all-selected' id='all-selected' class='allSelected2' autocomplete="off">
 					<label for="all-selected">全选</label>
 				</div>
 				<div class="operation">
-					<a href="#">删除</a>
+					<a href="#" class='delete'>删除</a>
 					<a href="#">移入收藏夹</a>
 					<a href="#">分享</a>
 				</div>
