@@ -44,7 +44,7 @@ $(document).ready(function() {
 	});
 
 	//搜索框下拉列表
-	$('.header-search-input').keyup(function(event) {
+	$('body').on('keyup','.header-search-input',function(event){
 		var $val = $(this).val();
 		$.get('search.json',{'Query':$val}, function(data) {
 			for (var i = 0; i < data.length; i++) {
@@ -58,8 +58,8 @@ $(document).ready(function() {
 					$html+='</ul>';
 					$('.list').html($html).show().css({
 						'position':'absolute',
-						'left':$('.header-search-input').offset().left,
-						'top':$('.header-search-input').offset().top+$('.header-search-input').height()+5
+						'left':0,
+						'top':$('.header-search-input').height()+5
 					})
 				}
 			}
@@ -71,12 +71,260 @@ $(document).ready(function() {
 		if ($(this).val() === '') {
 			$('.list').hide();
 		}
+		if (event.which === 13) {
+			shoppingCart();
+		}
 	});
+
+	//删除商品
+	var thisInfo;
+	var previous;
+	$('body').on('click','.delete',function(event){
+			var $this = $(event.target);
+			thisInfo = $this.parents('.mainCommodity');
+			var index = thisInfo.index();
+			previous = thisInfo.prev();
+			var itemBasisInfo = thisInfo.find('.item-basis-info a').text().trim();
+			var html = '';
+			thisInfo.detach();
+			html +='<div class="undo-wrapper">';
+			html +='<div class="deleteCom">';
+			html +='<p>';
+			html +='成功删除';
+			html +='<em>1</em>';
+			html +='件宝贝，';
+			html +='如果有误，可';
+			html +='<a href="#" class="turnBack">撤销本次删除</a>';
+			html +='</p>';
+			html +='</div>';
+			html +='</div>';
+			previous.after(html);
+			return false;
+	});
+
+	//恢复商品
+	$('body').on('click','.turnBack',function(event){
+		previous.after(thisInfo);
+		$('.undo-wrapper').hide();
+		return false;
+	})
+
 
 	//搜索下拉列表隐藏
 	$(document).on('click', function(event) {
 		$('.list').hide();
 	});
+
+/*
+	//降价商品查询
+	$('.switch-cart-1').click(function(event) {
+		$.get('discount.json', function(data) {
+			for (var i = 0; i < data.length; i++) {
+				var $data = data[i][0].Results[0].Suggests;
+				var $html = '';
+				$.each($data, function(index, val) {
+					$html+='<div class="mainCommodity">';
+					$html+='<div class="shopInfo">';
+						$html+='<div class="shopMsg">';
+							$html+='<input type="checkbox" name="shopMsg" id="liningBas" class="shopMsg-input" autocomplete="off">';
+							$html+='<label for="liningBas">';
+							$html+='店铺：';
+							$html+='</label>';
+							$html+='<a href="#">'+val.shop+'';
+							$html+='</a>'
+							$html+='</div>';
+					$html+='</div>';
+					$html+='<div class="commodityInfo">';
+					$html+='<ul>';
+						$html+='<li class="td-chk">';
+							$html+='<div class="td-inner">';
+							$html+='<input type="checkbox" name="checkbox" autocomplete="off">';
+							$html+='</div>';
+						$html+='</li>';
+						$html+='<li class="td-item">';
+							$html+='<div class="td-inner">';
+								$html+='<a class="desImg" href="#">';
+								$html+='<img alt="'+val.Txt+'" src="'+val.image+'">';
+								$html+='</a>';
+								$html+='<div class="item-info">';
+									$html+='<div class="item-basis-info">';
+										$html+='<a href="#">'+val.Txt+'';
+										$html+='</a>';
+									$html+='</div>';
+									$html+='<div class="item-other-info">';
+										$html+='<div class="item-other-space"></div>';
+										$html+='<div class="item-other-list">';
+											$html+='<a href="#" title="支持信用卡支付">';
+												$html+='<img alt="支持信用卡支付" src="'+val.bandCard+'">';
+											$html+='</a>';
+											$html+='<a href="#" title="7天无理由" class="sevenDay">';
+												$html+='<img alt="7天无理由" src="'+val.sevenDay+'">';
+											$html+='</a>';
+											$html+='<a href="#" title="消费者保障服务">';
+												$html+='<img alt="消费者保障服务" src="'+val.guarantee+'">';
+											$html+='</a>';
+										$html+='</div>';
+									$html+='</div>';
+								$html+='</div>';
+							$html+'</div>';
+						$html+='</li>';
+						$html+='<li class="td-info">';
+							$html+='<div class="td-info-msg">';
+								$html+='<p>'+val.color+'</p>';
+								$html+='<p>'+val.size+'</p>';
+							$html+='</div>';
+						$html+='</li>';
+						$html+='<li class="td-price">';
+							$html+='<div class="td-inner">';
+								$html+='<p class="non-discount">'+val.nonDiscount+'</p>';
+								$html+='<p class="discount">￥';
+									$html+='<span>'+val.num+'</span>';
+								$html+='</p>';
+								$html+='<div class="promotion">卖家促销';
+									$html+='<i class="promotionIcon"></i>';
+								$html+='</div>';
+								$html+='<div class="proSlidedown">';
+									$html+='<p class="newPro">卖家促销：秋季特惠</p>';
+									$html+='<p>优惠：￥200.00</p>';
+								$html+='</div>';
+							$html+='</div>';
+						$html+='</li>';
+						$html+='<li class="td-amount">';
+							$html+='<div class="item-amount">';
+								$html+='<a href="#" class="amount-left amount-color">-</a>';
+								$html+='<input type="text" name="amountNum" value="1" autocomplete="off" />';
+								$html+='<a href="#" class="amount-right">+</a>';
+							$html+='</div>';
+						$html+='</li>';
+						$html+='<li class="td-sum">';
+							$html+='<em>￥</em>'
+							$html+='<span>'+val.num+'</span>';
+						$html+='</li>';
+						$html+='<li class="td-operation">';
+							$html+='<p>';
+								$html+='<a href="#">删除</a>';
+							$html+='</p>';
+						$html+='</li>';
+					$html+='</ul>';
+					$html+='</div>';
+					$html+='</div>';
+					$('.commodityContainer').html($html);
+				});
+			}
+		});
+		return false;
+	});
+
+*/
+
+
+	//购物车存放产品--- 通用function
+	function shoppingCart(){
+		var $val = $('.header-search-input').val();
+		$.get('basketballShoes.json',{'Query':$val}, function(data) {
+			for (var i = 0; i < data.length; i++) {
+				if ($val === data[i][0].Query) {
+					var $data = data[i][0].Results[0].Suggests;
+					var $html = '';
+					$.each($data, function(index, val) {
+						$html+='<div class="mainCommodity">';
+						$html+='<div class="shopInfo">';
+							$html+='<div class="shopMsg">';
+								$html+='<input type="checkbox" name="shopMsg" id="'+val.label+'" class="shopMsg-input" autocomplete="off">';
+								$html+='<label for="'+val.label+'">';
+								$html+='店铺：';
+								$html+='</label>';
+								$html+='<a href="#">'+val.shop+'';
+								$html+='</a>'
+								$html+='</div>';
+						$html+='</div>';
+						$html+='<div class="commodityInfo">';
+						$html+='<ul>';
+							$html+='<li class="td-chk">';
+								$html+='<div class="td-inner">';
+								$html+='<input type="checkbox" name="checkbox" autocomplete="off">';
+								$html+='</div>';
+							$html+='</li>';
+							$html+='<li class="td-item">';
+								$html+='<div class="td-inner">';
+									$html+='<a class="desImg" href="#">';
+									$html+='<img alt="'+val.Txt+'" src="'+val.image+'">';
+									$html+='</a>';
+									$html+='<div class="item-info">';
+										$html+='<div class="item-basis-info">';
+											$html+='<a href="#">'+val.Txt+'';
+											$html+='</a>';
+										$html+='</div>';
+										$html+='<div class="item-other-info">';
+											$html+='<div class="item-other-space"></div>';
+											$html+='<div class="item-other-list">';
+												$html+='<a href="#" title="支持信用卡支付">';
+													$html+='<img alt="支持信用卡支付" src="'+val.bandCard+'">';
+												$html+='</a>';
+												$html+='<a href="#" title="7天无理由" class="sevenDay">';
+													$html+='<img alt="7天无理由" src="'+val.sevenDay+'">';
+												$html+='</a>';
+												$html+='<a href="#" title="消费者保障服务">';
+													$html+='<img alt="消费者保障服务" src="'+val.guarantee+'">';
+												$html+='</a>';
+											$html+='</div>';
+										$html+='</div>';
+									$html+='</div>';
+								$html+'</div>';
+							$html+='</li>';
+							$html+='<li class="td-info">';
+								$html+='<div class="td-info-msg">';
+									$html+='<p>'+val.color+'</p>';
+									$html+='<p>'+val.size+'</p>';
+								$html+='</div>';
+							$html+='</li>';
+							$html+='<li class="td-price">';
+								$html+='<div class="td-inner">';
+									$html+='<p class="non-discount">'+val.nonDiscount+'</p>';
+									$html+='<p class="discount">￥';
+										$html+='<span>'+val.num+'</span>';
+									$html+='</p>';
+									$html+='<div class="promotion">卖家促销';
+										$html+='<i class="promotionIcon"></i>';
+									$html+='</div>';
+									$html+='<div class="proSlidedown">';
+										$html+='<p class="newPro">卖家促销：秋季特惠</p>';
+										$html+='<p>优惠：￥200.00</p>';
+									$html+='</div>';
+								$html+='</div>';
+							$html+='</li>';
+							$html+='<li class="td-amount">';
+								$html+='<div class="item-amount">';
+									$html+='<a href="#" class="amount-left amount-color">-</a>';
+									$html+='<input type="text" name="amountNum" value="1" autocomplete="off" />';
+									$html+='<a href="#" class="amount-right">+</a>';
+								$html+='</div>';
+							$html+='</li>';
+							$html+='<li class="td-sum">';
+								$html+='<em>￥</em>'
+								$html+='<span>'+val.num+'</span>';
+							$html+='</li>';
+							$html+='<li class="td-operation">';
+								$html+='<p>';
+									$html+='<a href="#">删除</a>';
+								$html+='</p>';
+							$html+='</li>';
+						$html+='</ul>';
+						$html+='</div>';
+						$html+='</div>';
+						$('.commodityContainer').html($html);
+					});
+				}
+			}
+		});
+	}
+
+	//搜索购物车内存放的产品
+	$('.header-search button').click(function(event) {
+		shoppingCart();
+
+	});
+
 
 	//下边框移动
 	$('.btn-switch-cart').mouseenter(function(event) {
@@ -88,55 +336,63 @@ $(document).ready(function() {
 	});
 
 	//卖家促销下拉列表
-	$('.promotion').hover(function() {
-		$(this).siblings('.proSlidedown').stop().show('fast');
-	}, function() {
-		$(this).siblings('.proSlidedown').stop().hide('fast');
+	$('body').on('mouseenter mouseleave','.promotion',function(event){
+		if (event.type==='mouseenter') {
+			$(this).siblings('.proSlidedown').stop().show('fast');
+		} else {
+			$(this).siblings('.proSlidedown').stop().hide('fast');
+		}
 	});
+
+
+
 
 
 	//商品数量的输入框
-	$('.item-amount input').keypress(function(event) {
-		var thisParent = $(this).parents('.td-amount');
-		var thisInput = $(this).parent('.item-amount');
-		var $text = thisParent.siblings('.td-price').find('span').text();
-		var tdSum = thisParent.find('.td-sum').children('span');
-		var keyCode = event.keyCode ? event.keyCode : event.charCode ;
-		if (keyCode !== 0 && (keyCode <48 || keyCode >57) && keyCode!==8 && keyCode !==37 && keyCode !==39 && keyCode !==46) {
-			return false;
+	$('body').on('keypress keyup blur','.item-amount input',function(event){
+		if (event.type==='keypress') {
+			var thisParent = $(this).parents('.td-amount');
+			var thisInput = $(this).parent('.item-amount');
+			var $text = thisParent.siblings('.td-price').find('span').text();
+			var tdSum = thisParent.find('.td-sum').children('span');
+			var keyCode = event.keyCode ? event.keyCode : event.charCode ;
+			if (keyCode !== 0 && (keyCode <48 || keyCode >57) && keyCode!==8 && keyCode !==37 && keyCode !==39 && keyCode !==46) {
+				return false;
+			} else {
+				return true;
+			};
+		} else if(event.type ==='keyup'){
+			var thisParent = $(this).parents('.td-amount');
+			var thisInput = $(this).parent('.item-amount');
+			var $text = thisParent.siblings('.td-price').find('span').text();
+			var tdSum = thisParent.siblings('.td-sum').find('span');
+			var keyCode = event.keyCode ? event.keyCode : event.charCode ;
+			if (keyCode !== 8) {
+				var num = parseInt($(this).val()) || 0;
+				num = num < 1 ? 1 : num;
+				var num = $(this).val();
+				tdSum.text($text * num + '.00');
+			};
+			var anNum = $(this).val();
+			tdSum.text($text * anNum +'.00');
+			getCount();
 		} else {
-			return true;
-		}
-	}).keyup(function(event) {
-		var thisParent = $(this).parents('.td-amount');
-		var thisInput = $(this).parent('.item-amount');
-		var $text = thisParent.siblings('.td-price').find('span').text();
-		var tdSum = thisParent.siblings('.td-sum').find('span');
-		var keyCode = event.keyCode ? event.keyCode : event.charCode ;
-		if (keyCode !== 8) {
+			var thisParent = $(this).parents('.td-amount');
+			var thisInput = $(this).parent('.item-amount');
+			var $text = thisParent.siblings('.td-price').find('span').text();
+			var tdSum = thisParent.siblings('.td-sum').find('span');
+			var keyCode = event.keyCode ? event.keyCode : event.keyCode;
 			var num = parseInt($(this).val()) || 0;
-			num = num < 1 ? 1 : num;
-			var num = $(this).val();
-			tdSum.text($text * num + '.00');
-		};
-		var anNum = $(this).val();
-		tdSum.text($text * anNum +'.00');
-		getCount();
-	}).blur(function(event) {
-		var thisParent = $(this).parents('.td-amount');
-		var thisInput = $(this).parent('.item-amount');
-		var $text = thisParent.siblings('.td-price').find('span').text();
-		var tdSum = thisParent.siblings('.td-sum').find('span');
-		var keyCode = event.keyCode ? event.keyCode : event.keyCode;
-		var num = parseInt($(this).val()) || 0;
-		num = num < 1 ? 1 : num ;
-		$(this).val(num);
-		var anNum = $(this).val();
-		tdSum.text($text * anNum +'.00');
+			num = num < 1 ? 1 : num ;
+			$(this).val(num);
+			var anNum = $(this).val();
+			tdSum.text($text * anNum +'.00');
+			getCount();
+		}
 	});
 
 	//商品数量增加
-	$('.amount-right').click(function(event) {
+	$('body').on('click','.amount-right',function(event){
 		var thisParent = $(this).parents('.td-amount');
 		var thisInput = $(this).parent('.item-amount');
 		var $text = thisParent.siblings('.td-price').find('span').text();
@@ -154,7 +410,7 @@ $(document).ready(function() {
 	});
 
 	//商品数量减少
-	$('.amount-left').click(function(event){
+	$('body').on('click','.amount-left',function(event){
 		var thisParent = $(this).parents('.td-amount');
 		var thisInput = $(this).parent('.item-amount');
 		var $text = thisParent.siblings('.td-price').find('span').text();
@@ -307,7 +563,7 @@ $(document).ready(function() {
 
 
 	//点击某商品时选中
-	$('.td-inner input').click(function(event) {
+	$('body').on('click','.td-inner input',function(event){
 		if ($(this).prop('checked')) {
 			$(this).parents('.commodityInfo').siblings('.shopInfo').find('input').prop('checked',true);
 			$(this).parents('.commodityInfo').css({
@@ -325,7 +581,7 @@ $(document).ready(function() {
 	});
 
 	//点击某商品时选中
-	$('.shopInfo input').click(function(event) {
+	$('body').on('click','.shopInfo input',function(event){
 		if ($(this).prop('checked')) {
 			$(this).parents('.shopInfo').siblings('.commodityInfo').find('.td-inner input').prop('checked',true);
 			$(this).parents('.shopInfo').siblings('.commodityInfo').css({
@@ -341,6 +597,9 @@ $(document).ready(function() {
 		cancelSelect();
 		getCount();
 	});
+
+
+	//删除商品
 
 
 
