@@ -1,0 +1,233 @@
+@charset 'UTF-8';
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "normalize","compass";
+
+
+
+%iphone6 {
+	@media (min-device-width:375px) {
+		html{
+			font-size:37.5px;
+		}
+	}
+}
+%iphone6Plus {
+	@media (min-device-width:375px) {
+		html{
+			font-size:41.4px;
+		}
+	}
+}
+html{
+	font-size:32px;
+	@extend %iphone6;
+	@extend %iphone6Plus;
+}
+
+body{
+	background-color:#eee;
+	margin-bottom:2rem;
+}
+
+.container{
+	width:100%;
+}
+.site-nav{
+	height:40px;
+	width:100%;
+	@include display-flex();
+	background-color: #fff;
+	@include justify-content(center);
+	@include align-items(center);
+	margin-bottom:0.3rem;
+}
+
+.navLeft{
+	@include flex(1);
+	span{
+		display:inline-block;
+		font-size:0.8rem;
+		font-weight: bold;
+		color:#777B83;
+		margin-left:0.6rem;
+		cursor:pointer;
+	}
+}
+
+.navRight{
+	@include flex(1);
+}
+
+.navCenter{
+	@include flex(1);
+	font-size:0.65rem;
+	text-align:center;
+	color:#616F77;
+	span{
+		font-size:0.6rem;
+		color:#051B28;
+	}
+}
+
+.shopMsg{
+	height:1.1rem;
+	line-height:1.1rem;
+	padding-left:0.1rem;
+	a{
+		&::after{
+			content:'>';
+			display:inline-block;
+			margin-left:.2rem;
+			font-weight:bold;
+			font-size:0.35rem;
+			color:#A9A9A9;
+		}
+	}
+}
+.shopInfo{
+	background-color:#fff;
+}
+
+.commodityInfo{
+	border:none;
+	padding:0.2rem 0 0.1rem;
+	background-color:#F5F5F5;
+	@include display-flex();
+	width:100%;
+	@include flex-direction(column);
+	.td-chk{
+		padding-left:0.1rem;
+		width:0.8rem;
+		@include display-flex();
+		@include align-items(center);
+	}
+	.desImg img {
+		max-width:100%;
+	}
+	.td-info1{
+		padding:0.2rem 0.3rem 0.1rem;
+		@include flex(1);
+		@include display-flex();
+		@include box-sizing();
+		@include flex-direction(column);
+	}
+	.td-item1{
+		float:left;
+	}
+	.item-info{
+		margin:-0.25rem 0 0 0 ;
+		min-height:1rem;
+	}
+	.td-info-msg{
+		min-height:1rem;
+		p{
+			margin:0;
+			padding-bottom: 0;
+		}
+	}
+}
+
+
+
+.item-basis-info{
+	overflow:hidden;
+	-moz-line-clamp:2;
+	-webkit-line-clamp:2;
+	-ms-line-clamp:2;
+	-o-line-clamp:2;
+	line-clamp:2;
+	text-overflow:ellipsis;
+	word-break:break-all;
+	height:0.9rem;
+	@include flexbox((
+		display:box,
+		box-orient:vertical
+	),1);
+}
+
+.td-inner{
+	padding-left:0.15rem;
+	@include align-self(center);
+}
+
+.td-innerMoney{
+	color:#f40;
+	p{
+		display:inline-block;
+	}
+	span{
+		font-size:0.1rem;
+	}
+	.discount{
+		font-size:0.45rem;
+	}
+	.non-discount{
+		color:#999;
+		text-decoration: line-through;
+	}
+}
+
+.footer{
+	width:100%;
+	height:1.56rem;
+	@include display-flex();
+	background-color:#fff;
+	@include align-items(center);
+}
+
+.all-selected{
+	width:1.56rem;
+	margin-left:0.4rem;
+	position:relative;
+	input{
+		position:absolute;
+		margin-top:0.59rem;
+	}
+	label{
+		margin-left:0.6rem;
+		font-size:0.45rem;
+		color:#758188;
+	}
+}
+
+
+.totalNum{
+	@include flex(1);
+	@include display-flex();
+	@include flex-direction(column);
+	@include align-items(flex-end);
+	.totalSum{
+		color:#758188;
+		font-size:0.3rem;
+	}
+	.moneySym{
+		color:#f40;
+	}
+	.total-sum{
+		color:#f40;
+		font-size:0.5rem;
+	}
+	.quantity{
+		margin-bottom:0.05rem;
+	}
+ }
+
+.btn-area1{
+	margin-left:0.4rem;
+	width:2.5rem;
+	text-align:center;
+	height:1.56rem;
+	line-height:1.56rem;
+	background-color:#f40;
+	@include border-radius(3px);
+	a{
+		font-size:0.5rem;
+		color:#fff;
+		text-decoration:none;
+		font-family:cursive;
+	}
+}
