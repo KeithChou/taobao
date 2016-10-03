@@ -401,7 +401,7 @@ $(document).ready(function() {
 			if (keyCode !== 8) {
 				var num = parseInt($(this).val()) || 0;
 				if (num < 1) {
-					num = 2;
+					num = 1;
 				} else if(num > $stock){
 					num = $stock;
 				} else {
@@ -421,7 +421,7 @@ $(document).ready(function() {
 			var $text = thisParent.siblings('.td-price').find('span').text();
 			var tdSum = thisParent.siblings('.td-sum').find('span');
 			var keyCode = event.keyCode ? event.keyCode : event.keyCode;
-			var num = parseInt($(this).val());
+			var num = parseInt($(this).val()) || 0;
 			if (num > $stock) {
 				num = $stock;
 			} else if(num < 1){
