@@ -366,11 +366,55 @@ body {
 }
 
 /* line 91, ../sass/mobile.scss */
-.shopInfo {
+.shopInfo1 {
   background-color: #fff;
+  position: relative;
 }
 
-/* line 95, ../sass/mobile.scss */
+/* line 97, ../sass/mobile.scss */
+.changeCount {
+  position: absolute;
+  right: 0.4rem;
+  top: 0.3rem;
+  text-align: center;
+}
+/* line 102, ../sass/mobile.scss */
+.changeCount a {
+  text-decoration: none;
+  color: #878787;
+  display: inline-block;
+  font-size: 0.4rem;
+  height: 0.55rem;
+  width: 0.55rem;
+  line-height: 0.55rem;
+  background-color: #fff;
+  border: 1px solid #9c9c9c;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 114, ../sass/mobile.scss */
+.changeCount .substrCount {
+  margin-right: 0.1rem;
+}
+/* line 117, ../sass/mobile.scss */
+.changeCount .plusCount {
+  margin-left: 0.1rem;
+}
+/* line 120, ../sass/mobile.scss */
+.changeCount input {
+  width: 1rem;
+  border: 1px solid #9c9c9c;
+  outline: none;
+  color: #878787;
+  text-align: center;
+  padding: 0.07rem 0.3rem;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 132, ../sass/mobile.scss */
 .commodityInfo {
   border: none;
   padding: 0.2rem 0 0.1rem;
@@ -381,7 +425,7 @@ body {
   -webkit-flex-direction: column;
   flex-direction: column;
 }
-/* line 102, ../sass/mobile.scss */
+/* line 139, ../sass/mobile.scss */
 .commodityInfo .td-chk {
   padding-left: 0.1rem;
   width: 0.8rem;
@@ -390,11 +434,11 @@ body {
   -webkit-align-items: center;
   align-items: center;
 }
-/* line 108, ../sass/mobile.scss */
+/* line 145, ../sass/mobile.scss */
 .commodityInfo .desImg img {
   max-width: 100%;
 }
-/* line 111, ../sass/mobile.scss */
+/* line 148, ../sass/mobile.scss */
 .commodityInfo .td-info1 {
   padding: 0.2rem 0.3rem 0.1rem;
   -webkit-flex: 1;
@@ -407,26 +451,26 @@ body {
   -webkit-flex-direction: column;
   flex-direction: column;
 }
-/* line 118, ../sass/mobile.scss */
+/* line 155, ../sass/mobile.scss */
 .commodityInfo .td-item1 {
   float: left;
 }
-/* line 121, ../sass/mobile.scss */
+/* line 158, ../sass/mobile.scss */
 .commodityInfo .item-info {
   margin: -0.25rem 0 0 0;
   min-height: 1rem;
 }
-/* line 125, ../sass/mobile.scss */
+/* line 162, ../sass/mobile.scss */
 .commodityInfo .td-info-msg {
   min-height: 1rem;
 }
-/* line 127, ../sass/mobile.scss */
+/* line 164, ../sass/mobile.scss */
 .commodityInfo .td-info-msg p {
   margin: 0;
   padding-bottom: 0;
 }
 
-/* line 136, ../sass/mobile.scss */
+/* line 173, ../sass/mobile.scss */
 .item-basis-info {
   overflow: hidden;
   -moz-line-clamp: 2;
@@ -436,43 +480,52 @@ body {
   line-clamp: 2;
   text-overflow: ellipsis;
   word-break: break-all;
-  height: 0.9rem;
+  height: 0.95rem;
   display: -moz-box;
   -moz-box-orient: vertical;
   display: -webkit-box;
   -webkit-box-orient: vertical;
 }
+/* line 187, ../sass/mobile.scss */
+.item-basis-info a {
+  line-height: 0.5rem;
+}
 
-/* line 152, ../sass/mobile.scss */
-.td-inner {
+/* line 192, ../sass/mobile.scss */
+.td-inner1 {
   padding-left: 0.15rem;
   -webkit-align-self: center;
   align-self: center;
 }
 
-/* line 157, ../sass/mobile.scss */
+/* line 197, ../sass/mobile.scss */
 .td-innerMoney {
   color: #f40;
 }
-/* line 159, ../sass/mobile.scss */
+/* line 199, ../sass/mobile.scss */
 .td-innerMoney p {
   display: inline-block;
 }
-/* line 162, ../sass/mobile.scss */
+/* line 202, ../sass/mobile.scss */
 .td-innerMoney span {
   font-size: 0.1rem;
 }
-/* line 165, ../sass/mobile.scss */
+/* line 205, ../sass/mobile.scss */
 .td-innerMoney .discount {
   font-size: 0.45rem;
 }
-/* line 168, ../sass/mobile.scss */
+/* line 208, ../sass/mobile.scss */
 .td-innerMoney .non-discount {
   color: #999;
   text-decoration: line-through;
 }
+/* line 212, ../sass/mobile.scss */
+.td-innerMoney .unitPrice {
+  font-style: normal;
+  display: none;
+}
 
-/* line 174, ../sass/mobile.scss */
+/* line 218, ../sass/mobile.scss */
 .footer {
   width: 100%;
   height: 1.56rem;
@@ -483,25 +536,25 @@ body {
   align-items: center;
 }
 
-/* line 182, ../sass/mobile.scss */
-.all-selected {
+/* line 226, ../sass/mobile.scss */
+.all-selected1 {
   width: 1.56rem;
   margin-left: 0.4rem;
   position: relative;
 }
-/* line 186, ../sass/mobile.scss */
-.all-selected input {
+/* line 230, ../sass/mobile.scss */
+.all-selected1 input {
   position: absolute;
-  margin-top: 0.59rem;
+  top: 0.05rem;
 }
-/* line 190, ../sass/mobile.scss */
-.all-selected label {
+/* line 234, ../sass/mobile.scss */
+.all-selected1 label {
   margin-left: 0.6rem;
   font-size: 0.45rem;
   color: #758188;
 }
 
-/* line 198, ../sass/mobile.scss */
+/* line 242, ../sass/mobile.scss */
 .totalNum {
   -webkit-flex: 1;
   flex: 1;
@@ -512,26 +565,26 @@ body {
   -webkit-align-items: flex-end;
   align-items: flex-end;
 }
-/* line 203, ../sass/mobile.scss */
-.totalNum .totalSum {
+/* line 247, ../sass/mobile.scss */
+.totalNum .totalAccount {
   color: #758188;
   font-size: 0.3rem;
 }
-/* line 207, ../sass/mobile.scss */
+/* line 251, ../sass/mobile.scss */
 .totalNum .moneySym {
   color: #f40;
 }
-/* line 210, ../sass/mobile.scss */
+/* line 254, ../sass/mobile.scss */
 .totalNum .total-sum {
   color: #f40;
   font-size: 0.5rem;
 }
-/* line 214, ../sass/mobile.scss */
+/* line 258, ../sass/mobile.scss */
 .totalNum .quantity {
   margin-bottom: 0.05rem;
 }
 
-/* line 219, ../sass/mobile.scss */
+/* line 263, ../sass/mobile.scss */
 .btn-area1 {
   margin-left: 0.4rem;
   width: 2.5rem;
@@ -543,7 +596,7 @@ body {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 227, ../sass/mobile.scss */
+/* line 271, ../sass/mobile.scss */
 .btn-area1 a {
   font-size: 0.5rem;
   color: #fff;
