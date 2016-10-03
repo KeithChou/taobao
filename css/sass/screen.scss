@@ -64,6 +64,7 @@ input{
 	margin-right: auto;
 	@extend %clearfix;
 	width:990px;
+	margin-bottom:70px;
 }
 
 .site-nav{
@@ -445,6 +446,29 @@ input{
 		}
 	}
 }
+
+.stock{
+	display:none;
+}
+.outNum{
+	margin-top:-1px;
+	position:absolute;
+	display:none;
+	width:78px;
+	padding:5px 10px;
+	@include box-sizing();
+	border:1px solid #FFE1D3;
+	background-color: #FFF0E7;
+	color:#f40;
+	@include opacity(.7);
+	em{
+		font-style:normal;
+	}
+}
+
+
+
+
 .commodityInfo{
 	@extend %clearfix;
 	border:1px solid #ccc;
@@ -609,7 +633,7 @@ input{
 			border:1px solid #aaa;
 			border-left-width:0;
 			border-right-width:0;
-			margin-left:19px;
+			margin-left:18px;
 			text-align:center;
 		}
 	}

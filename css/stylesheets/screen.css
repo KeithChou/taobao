@@ -353,60 +353,61 @@ input {
   margin-left: auto;
   margin-right: auto;
   width: 990px;
+  margin-bottom: 70px;
 }
 
-/* line 69, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
 .site-nav {
   background: #f5f5f5 scroll no-repeat 0 0;
   width: 100%;
   border-bottom: 1px solid #eee;
 }
 
-/* line 76, ../sass/screen.scss */
+/* line 77, ../sass/screen.scss */
 .nav {
   margin: 0 auto;
   height: 35px;
   line-height: 35px;
 }
 
-/* line 84, ../sass/screen.scss */
+/* line 85, ../sass/screen.scss */
 .nav-left {
   float: left;
 }
-/* line 87, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 .nav-left li {
   float: left;
   padding: 0 10px;
 }
-/* line 94, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 .nav-left .nav-msg {
   color: #111;
 }
-/* line 97, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .nav-left .nav-msg::before {
   content: url("../images/message.png");
   margin-right: 4px;
 }
 
-/* line 107, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 .nav-right {
   float: right;
 }
-/* line 110, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 .nav-right li {
   float: left;
 }
-/* line 113, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 .nav-right a {
   display: block;
   padding: 0 15px;
 }
-/* line 117, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
 .nav-right .nav-index {
   color: #F22E00;
 }
 
-/* line 129, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .nav-myTao-nav {
   display: none;
   padding: 8px 0;
@@ -416,50 +417,50 @@ input {
   border: 1px solid #eee;
   border-top-width: 0;
 }
-/* line 138, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 .nav-myTao-nav a {
   display: block;
   line-height: 28px;
   padding: 0 12px;
 }
-/* line 143, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
 .nav-myTao-nav a:hover {
   color: #6c6c6c;
   background-color: #f5f5f5;
 }
 
-/* line 151, ../sass/screen.scss */
+/* line 152, ../sass/screen.scss */
 .nav-collection::before {
   content: url("../images/star_gray.png");
   margin-right: 5px;
 }
-/* line 160, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 .nav-collection:hover::before {
   content: url("../images/star-orange.png");
 }
 
-/* line 180, ../sass/screen.scss */
+/* line 181, ../sass/screen.scss */
 .header {
   margin: 0 auto;
   height: 35px;
   padding: 20px 0 40px;
 }
-/* line 185, ../sass/screen.scss */
+/* line 186, ../sass/screen.scss */
 .header a {
   display: block;
   float: left;
 }
-/* line 188, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
 .header a::before {
   content: url("../images/taobao-icon.png");
 }
 
-/* line 196, ../sass/screen.scss */
+/* line 197, ../sass/screen.scss */
 .header-search {
   float: right;
   position: relative;
 }
-/* line 199, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 .header-search input {
   float: left;
   -moz-box-sizing: border-box;
@@ -471,7 +472,7 @@ input {
   padding-left: 8px;
   font-size: 1.3em;
 }
-/* line 208, ../sass/screen.scss */
+/* line 209, ../sass/screen.scss */
 .header-search button {
   float: left;
   -moz-box-sizing: border-box;
@@ -486,7 +487,7 @@ input {
   font-size: 1.6em;
 }
 
-/* line 221, ../sass/screen.scss */
+/* line 222, ../sass/screen.scss */
 .list {
   display: none;
   border: 1px solid #ccc;
@@ -495,30 +496,30 @@ input {
   z-index: 2;
   background-color: #fff;
 }
-/* line 232, ../sass/screen.scss */
+/* line 233, ../sass/screen.scss */
 .list li {
   font-size: 1.3em;
   cursor: pointer;
   padding: 4px 0 4px 4px;
 }
-/* line 236, ../sass/screen.scss */
+/* line 237, ../sass/screen.scss */
 .list li:hover {
   background-color: #F5FFF7;
 }
 
-/* line 242, ../sass/screen.scss */
+/* line 243, ../sass/screen.scss */
 .tbBar {
   overflow: hidden;
   position: relative;
   z-index: 0;
 }
 
-/* line 249, ../sass/screen.scss */
+/* line 250, ../sass/screen.scss */
 .switch-cart {
   height: 33px;
 }
 
-/* line 254, ../sass/screen.scss */
+/* line 255, ../sass/screen.scss */
 .btn-switch-cart {
   cursor: pointer;
   float: left;
@@ -530,39 +531,39 @@ input {
   text-align: center;
 }
 
-/* line 264, ../sass/screen.scss */
+/* line 265, ../sass/screen.scss */
 .switch-cart-0 {
   padding-left: 15px;
 }
 
-/* line 267, ../sass/screen.scss */
+/* line 268, ../sass/screen.scss */
 .switch-cart-1, .switch-cart-2 {
   padding-left: 25px;
 }
 
-/* line 270, ../sass/screen.scss */
+/* line 271, ../sass/screen.scss */
 .switch-cart-2 {
   cursor: not-allowed;
   padding-right: 25px;
 }
 
-/* line 275, ../sass/screen.scss */
+/* line 276, ../sass/screen.scss */
 .btn-switch-href {
   text-decoration: none;
   color: #FF4400;
 }
-/* line 278, ../sass/screen.scss */
+/* line 279, ../sass/screen.scss */
 .btn-switch-href em {
   margin-right: 3px;
   font-style: normal;
 }
-/* line 283, ../sass/screen.scss */
+/* line 284, ../sass/screen.scss */
 .btn-switch-href span.number {
   color: #ff4400;
   font-weight: normal;
   font-size: 12px;
 }
-/* line 289, ../sass/screen.scss */
+/* line 290, ../sass/screen.scss */
 .btn-switch-href span.pipe {
   width: 1px;
   height: 12px;
@@ -570,17 +571,17 @@ input {
   margin-left: 20px;
   background-color: #e8e8e8;
 }
-/* line 295, ../sass/screen.scss */
+/* line 296, ../sass/screen.scss */
 .btn-switch-href span.pipe.pipe-display {
   display: none;
 }
 
-/* line 300, ../sass/screen.scss */
+/* line 301, ../sass/screen.scss */
 .btn-switch-color {
   color: #3c3c3c;
 }
 
-/* line 304, ../sass/screen.scss */
+/* line 305, ../sass/screen.scss */
 .cart-sum {
   position: absolute;
   top: 0;
@@ -588,18 +589,18 @@ input {
   height: 25px;
   line-height: 25px;
 }
-/* line 310, ../sass/screen.scss */
+/* line 311, ../sass/screen.scss */
 .cart-sum .price {
   color: #f40;
   font-weight: 700;
   margin-right: 5px;
 }
-/* line 315, ../sass/screen.scss */
+/* line 316, ../sass/screen.scss */
 .cart-sum .total-symbol {
   font-size: 14px;
   font-weight: bold;
 }
-/* line 319, ../sass/screen.scss */
+/* line 320, ../sass/screen.scss */
 .cart-sum .submit-btn {
   text-decoration: none;
   display: inline-block;
@@ -611,35 +612,35 @@ input {
   border-radius: 2px;
 }
 
-/* line 329, ../sass/screen.scss */
+/* line 330, ../sass/screen.scss */
 .btn-common {
   cursor: not-allowed;
   background-color: #aaa;
 }
 
-/* line 333, ../sass/screen.scss */
+/* line 334, ../sass/screen.scss */
 .selected {
   background-color: #f40;
   cursor: pointer;
 }
 
-/* line 337, ../sass/screen.scss */
+/* line 338, ../sass/screen.scss */
 .wrap-line {
   background: #e6e6e6 none no-repeat scroll 0 0;
   height: 2px;
 }
 
-/* line 341, ../sass/screen.scss */
+/* line 342, ../sass/screen.scss */
 .selectColumn {
   border-bottom: 2px solid #f40;
 }
 
-/* line 344, ../sass/screen.scss */
+/* line 345, ../sass/screen.scss */
 .tbMain {
   min-height: 210px;
 }
 
-/* line 347, ../sass/screen.scss */
+/* line 348, ../sass/screen.scss */
 .commodityColumn {
   color: #3c3c3c;
   height: 50px;
@@ -648,25 +649,25 @@ input {
   overflow: hidden;
 }
 
-/* line 355, ../sass/screen.scss */
+/* line 356, ../sass/screen.scss */
 .th-chk, .commodityInfo .td-chk {
   position: relative;
   height: 50px;
   width: 45px;
 }
 
-/* line 361, ../sass/screen.scss */
+/* line 362, ../sass/screen.scss */
 .selectAll {
   position: absolute;
   padding-left: 20px;
   width: 80px;
   cursor: pointer;
 }
-/* line 366, ../sass/screen.scss */
+/* line 367, ../sass/screen.scss */
 .selectAll input {
   cursor: pointer;
 }
-/* line 369, ../sass/screen.scss */
+/* line 370, ../sass/screen.scss */
 .selectAll label {
   margin-top: -2px;
   position: absolute;
@@ -674,177 +675,203 @@ input {
   cursor: pointer;
 }
 
-/* line 376, ../sass/screen.scss */
+/* line 377, ../sass/screen.scss */
 .th-inner, .commodityInfo .td-item {
   width: 302px;
 }
 
-/* line 381, ../sass/screen.scss */
+/* line 382, ../sass/screen.scss */
 .commodityMsg {
   padding-left: 91px;
 }
-/* line 383, ../sass/screen.scss */
+/* line 384, ../sass/screen.scss */
 .commodityMsg div {
   margin-top: -3px;
 }
 
-/* line 387, ../sass/screen.scss */
+/* line 388, ../sass/screen.scss */
 .th-space, .commodityInfo .td-info {
   width: 172px;
   padding-right: 20px;
 }
 
-/* line 392, ../sass/screen.scss */
+/* line 393, ../sass/screen.scss */
 .td-inner {
   padding-left: 10px;
   margin-top: -2px;
 }
 
-/* line 396, ../sass/screen.scss */
+/* line 397, ../sass/screen.scss */
 .th-price, .th-amount, .commodityInfo .td-price, .commodityInfo .td-amount {
   width: 120px;
 }
 
-/* line 403, ../sass/screen.scss */
+/* line 404, ../sass/screen.scss */
 .th-sum, .commodityInfo .td-sum {
   width: 105px;
 }
-/* line 406, ../sass/screen.scss */
+/* line 407, ../sass/screen.scss */
 .th-sum .td-inner, .commodityInfo .td-sum .td-inner {
   padding-left: 0;
 }
 
-/* line 410, ../sass/screen.scss */
+/* line 411, ../sass/screen.scss */
 .th-operation, .commodityInfo .td-operation {
   width: 84px;
   padding-left: 15px;
 }
-/* line 414, ../sass/screen.scss */
+/* line 415, ../sass/screen.scss */
 .th-operation .td-inner, .commodityInfo .td-operation .td-inner {
   padding-left: 0;
 }
 
-/* line 418, ../sass/screen.scss */
+/* line 419, ../sass/screen.scss */
 .mainCommodity {
   margin-bottom: 10px;
 }
 
-/* line 424, ../sass/screen.scss */
+/* line 425, ../sass/screen.scss */
 .shopMsg {
   line-height: 38px;
   padding-left: 15px;
   position: relative;
 }
-/* line 428, ../sass/screen.scss */
+/* line 429, ../sass/screen.scss */
 .shopMsg .shopMsg-input {
   position: relative;
   top: 2px;
   cursor: pointer;
   left: 5px;
 }
-/* line 434, ../sass/screen.scss */
+/* line 435, ../sass/screen.scss */
 .shopMsg label {
   margin-left: 10px;
   cursor: pointer;
   display: inline-block;
 }
-/* line 439, ../sass/screen.scss */
+/* line 440, ../sass/screen.scss */
 .shopMsg a {
   text-decoration: none;
   color: #3c3c3c;
 }
-/* line 442, ../sass/screen.scss */
+/* line 443, ../sass/screen.scss */
 .shopMsg a:hover {
   color: #f40;
   text-decoration: underline;
 }
 
-/* line 448, ../sass/screen.scss */
+/* line 450, ../sass/screen.scss */
+.stock {
+  display: none;
+}
+
+/* line 453, ../sass/screen.scss */
+.outNum {
+  margin-top: -1px;
+  position: absolute;
+  display: none;
+  width: 78px;
+  padding: 5px 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #FFE1D3;
+  background-color: #FFF0E7;
+  color: #f40;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+/* line 464, ../sass/screen.scss */
+.outNum em {
+  font-style: normal;
+}
+
+/* line 472, ../sass/screen.scss */
 .commodityInfo {
   border: 1px solid #ccc;
   padding: 20px 0;
   background-color: #FCFCFC;
 }
-/* line 457, ../sass/screen.scss */
+/* line 481, ../sass/screen.scss */
 .commodityInfo .td-chk {
   width: 35px;
   min-height: 79px;
   padding-left: 10px;
 }
-/* line 463, ../sass/screen.scss */
+/* line 487, ../sass/screen.scss */
 .commodityInfo .td-item {
   min-height: 79px;
 }
-/* line 467, ../sass/screen.scss */
+/* line 491, ../sass/screen.scss */
 .commodityInfo .desImg {
   display: inline-block;
   float: left;
 }
-/* line 470, ../sass/screen.scss */
+/* line 494, ../sass/screen.scss */
 .commodityInfo .desImg img {
   max-width: 80px;
   max-height: 80px;
 }
-/* line 475, ../sass/screen.scss */
+/* line 499, ../sass/screen.scss */
 .commodityInfo .item-info {
   margin: -3px 0 0 91px;
   padding-right: 15px;
   min-height: 79px;
 }
-/* line 479, ../sass/screen.scss */
+/* line 503, ../sass/screen.scss */
 .commodityInfo .item-info a {
   text-decoration: none;
   color: #3c3c3c;
 }
-/* line 482, ../sass/screen.scss */
+/* line 506, ../sass/screen.scss */
 .commodityInfo .item-info a:hover {
   color: #f40;
   text-decoration: underline;
 }
-/* line 488, ../sass/screen.scss */
+/* line 512, ../sass/screen.scss */
 .commodityInfo .item-other-space {
   min-height: 26px;
   overflow: hidden;
 }
-/* line 492, ../sass/screen.scss */
+/* line 516, ../sass/screen.scss */
 .commodityInfo .sevenDay {
   display: inline-block;
   padding: 0 2px;
 }
-/* line 496, ../sass/screen.scss */
+/* line 520, ../sass/screen.scss */
 .commodityInfo .td-info {
   min-height: 79px;
 }
-/* line 500, ../sass/screen.scss */
+/* line 524, ../sass/screen.scss */
 .commodityInfo .td-info-msg {
   min-height: 84px;
 }
-/* line 502, ../sass/screen.scss */
+/* line 526, ../sass/screen.scss */
 .commodityInfo .td-info-msg p {
   margin: 0 5px 0 15px;
   color: #9c9c9c;
   padding-bottom: 3px;
   margin-top: -2px;
 }
-/* line 509, ../sass/screen.scss */
+/* line 533, ../sass/screen.scss */
 .commodityInfo .td-price {
   min-height: 79px;
 }
-/* line 512, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .commodityInfo .td-price .non-discount {
   font-size: 1em;
   color: #9c9c9c;
   text-decoration: line-through;
 }
-/* line 517, ../sass/screen.scss */
+/* line 541, ../sass/screen.scss */
 .commodityInfo .td-price .discount {
   font-weight: 600;
 }
-/* line 519, ../sass/screen.scss */
+/* line 543, ../sass/screen.scss */
 .commodityInfo .td-price .discount span {
   font-size: 1.2em;
 }
-/* line 523, ../sass/screen.scss */
+/* line 547, ../sass/screen.scss */
 .commodityInfo .td-price .promotion {
   height: 23px;
   line-height: 23px;
@@ -861,19 +888,19 @@ input {
   font-size: 1.1em;
   padding-left: 3px;
 }
-/* line 537, ../sass/screen.scss */
+/* line 561, ../sass/screen.scss */
 .commodityInfo .td-price .promotion:hover .promotionIcon {
   position: absolute;
   margin-top: 5px;
   border-bottom-color: #f40;
 }
-/* line 545, ../sass/screen.scss */
+/* line 569, ../sass/screen.scss */
 .commodityInfo .td-price .promotionIcon {
   position: absolute;
   margin-top: 10px;
   border-top-color: #f40;
 }
-/* line 552, ../sass/screen.scss */
+/* line 576, ../sass/screen.scss */
 .commodityInfo .proSlidedown {
   width: 136px;
   padding: 10px;
@@ -886,26 +913,26 @@ input {
   -webkit-box-shadow: 2px 2px 3px #f4f4f4;
   box-shadow: 2px 2px 3px #f4f4f4;
 }
-/* line 561, ../sass/screen.scss */
+/* line 585, ../sass/screen.scss */
 .commodityInfo .proSlidedown p {
   color: #9c9c9c;
 }
-/* line 564, ../sass/screen.scss */
+/* line 588, ../sass/screen.scss */
 .commodityInfo .proSlidedown .newPro {
   padding-bottom: 4px;
 }
-/* line 568, ../sass/screen.scss */
+/* line 592, ../sass/screen.scss */
 .commodityInfo .td-amount {
   min-height: 79px;
 }
-/* line 572, ../sass/screen.scss */
+/* line 596, ../sass/screen.scss */
 .commodityInfo .item-amount {
   height: 25px;
   overflow: hidden;
   position: relative;
   z-index: 1;
 }
-/* line 577, ../sass/screen.scss */
+/* line 601, ../sass/screen.scss */
 .commodityInfo .item-amount a {
   display: inline-block;
   height: 23px;
@@ -920,23 +947,23 @@ input {
   font-size: 14px;
   color: #444;
 }
-/* line 590, ../sass/screen.scss */
+/* line 614, ../sass/screen.scss */
 .commodityInfo .item-amount a:hover {
   border: 1px solid #f60;
 }
-/* line 594, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 .commodityInfo .item-amount .amount-right {
   border-left-color: #aaa;
 }
-/* line 597, ../sass/screen.scss */
+/* line 621, ../sass/screen.scss */
 .commodityInfo .item-amount .amount-color {
   color: #444;
 }
-/* line 600, ../sass/screen.scss */
+/* line 624, ../sass/screen.scss */
 .commodityInfo .item-amount .amount-left {
   border-right-color: #aaa;
 }
-/* line 604, ../sass/screen.scss */
+/* line 628, ../sass/screen.scss */
 .commodityInfo .item-amount input {
   width: 39px;
   height: 15px;
@@ -945,42 +972,42 @@ input {
   border: 1px solid #aaa;
   border-left-width: 0;
   border-right-width: 0;
-  margin-left: 19px;
+  margin-left: 18px;
   text-align: center;
 }
-/* line 616, ../sass/screen.scss */
+/* line 640, ../sass/screen.scss */
 .commodityInfo .td-sum {
   min-height: 79px;
   color: #f40;
   font-weight: bold;
 }
-/* line 621, ../sass/screen.scss */
+/* line 645, ../sass/screen.scss */
 .commodityInfo .td-sum em {
   font-style: normal;
   font-size: 1.3em;
 }
-/* line 625, ../sass/screen.scss */
+/* line 649, ../sass/screen.scss */
 .commodityInfo .td-sum span {
   font-size: 1.2em;
 }
-/* line 629, ../sass/screen.scss */
+/* line 653, ../sass/screen.scss */
 .commodityInfo .td-operation {
   min-height: 79px;
 }
-/* line 632, ../sass/screen.scss */
+/* line 656, ../sass/screen.scss */
 .commodityInfo .td-operation a {
   color: #3c3c3c;
   text-decoration: none;
   display: inline-block;
   margin-top: 4px;
 }
-/* line 637, ../sass/screen.scss */
+/* line 661, ../sass/screen.scss */
 .commodityInfo .td-operation a:hover {
   color: #f40;
   text-decoration: underline;
 }
 
-/* line 645, ../sass/screen.scss */
+/* line 669, ../sass/screen.scss */
 .footer {
   width: 990px;
   height: 50px;
@@ -991,7 +1018,7 @@ input {
   background-color: #E5E5E5;
 }
 
-/* line 654, ../sass/screen.scss */
+/* line 678, ../sass/screen.scss */
 .all-selected {
   cursor: pointer;
   float: left;
@@ -999,66 +1026,66 @@ input {
   padding-left: 5px;
   width: 50px;
 }
-/* line 660, ../sass/screen.scss */
+/* line 684, ../sass/screen.scss */
 .all-selected input {
   position: relative;
   top: 1px;
   cursor: pointer;
 }
-/* line 665, ../sass/screen.scss */
+/* line 689, ../sass/screen.scss */
 .all-selected label {
   display: inline-block;
   cursor: pointer;
 }
 
-/* line 670, ../sass/screen.scss */
+/* line 694, ../sass/screen.scss */
 .operation {
   float: left;
   line-height: 50px;
 }
-/* line 673, ../sass/screen.scss */
+/* line 697, ../sass/screen.scss */
 .operation a {
   margin-left: 25px;
   color: #3c3c3c;
   text-decoration: none;
 }
-/* line 677, ../sass/screen.scss */
+/* line 701, ../sass/screen.scss */
 .operation a:hover {
   text-decoration: underline;
   color: #f40;
 }
 
-/* line 684, ../sass/screen.scss */
+/* line 708, ../sass/screen.scss */
 .float-bar-right {
   float: right;
   line-height: 50px;
   padding-left: 20px;
 }
 
-/* line 689, ../sass/screen.scss */
+/* line 713, ../sass/screen.scss */
 .amount-sum {
   cursor: pointer;
   float: left;
   padding-right: 20px;
 }
-/* line 693, ../sass/screen.scss */
+/* line 717, ../sass/screen.scss */
 .amount-sum em {
   font-style: normal;
   color: #f40;
   font-size: 1.4em;
 }
 
-/* line 699, ../sass/screen.scss */
+/* line 723, ../sass/screen.scss */
 .price-sum {
   float: left;
   line-height: 44px;
   padding-right: 20px;
 }
-/* line 703, ../sass/screen.scss */
+/* line 727, ../sass/screen.scss */
 .price-sum .moneySym {
   color: #f40;
 }
-/* line 706, ../sass/screen.scss */
+/* line 730, ../sass/screen.scss */
 .price-sum .total-sum {
   font-size: 1.8em;
   font-weight: bold;
@@ -1066,12 +1093,12 @@ input {
   color: #f40;
 }
 
-/* line 713, ../sass/screen.scss */
+/* line 737, ../sass/screen.scss */
 .btn-area {
   float: left;
   line-height: 50px;
 }
-/* line 716, ../sass/screen.scss */
+/* line 740, ../sass/screen.scss */
 .btn-area a {
   display: inline-block;
   width: 120px;
@@ -1083,7 +1110,7 @@ input {
   border-radius: 2px;
 }
 
-/* line 728, ../sass/screen.scss */
+/* line 752, ../sass/screen.scss */
 .undo-wrapper {
   border: 1px solid #fcd3b6;
   margin: 40px 0 30px;
@@ -1095,29 +1122,29 @@ input {
   border-radius: 3px;
 }
 
-/* line 735, ../sass/screen.scss */
+/* line 759, ../sass/screen.scss */
 .deleteCom {
   border: 2px solid #fff8d9;
   height: 26px;
   line-height: 26px;
 }
-/* line 739, ../sass/screen.scss */
+/* line 763, ../sass/screen.scss */
 .deleteCom p {
   padding-left: 25px;
   color: #404040;
 }
-/* line 743, ../sass/screen.scss */
+/* line 767, ../sass/screen.scss */
 .deleteCom em {
   font-style: normal;
   margin: 0 4px;
   color: #404040;
 }
-/* line 748, ../sass/screen.scss */
+/* line 772, ../sass/screen.scss */
 .deleteCom a {
   color: #404040;
   text-decoration: none;
 }
-/* line 751, ../sass/screen.scss */
+/* line 775, ../sass/screen.scss */
 .deleteCom a:hover {
   color: #f40;
   text-decoration: underline;
