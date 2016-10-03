@@ -282,7 +282,7 @@ $(document).ready(function() {
 								$html+='<div class="td-inner">';
 									$html+='<p class="non-discount">'+val.nonDiscount+'</p>';
 									$html+='<p class="discount">￥';
-										$html+='<span>'+val.num+'</span>';
+										$html+='<span>'+val.num+'.00</span>';
 									$html+='</p>';
 									$html+='<div class="promotion">卖家促销';
 										$html+='<i class="promotionIcon"></i>';
@@ -299,10 +299,16 @@ $(document).ready(function() {
 									$html+='<input type="text" name="amountNum" value="1" autocomplete="off" />';
 									$html+='<a href="#" class="amount-right">+</a>';
 								$html+='</div>';
+								$html+='<div class="stock">'+val.max+'</div>';
+								$html+='<div class="outNum">';
+									$html+='<span class="instr">最多只能购买</span>';
+									$html+='<span class="stockNum"></span>';
+									$html+='<em>件</em>';
+								$html+='</div>';
 							$html+='</li>';
 							$html+='<li class="td-sum">';
 								$html+='<em>￥</em>'
-								$html+='<span>'+val.num+'</span>';
+								$html+='<span>'+val.num+'.00</span>';
 							$html+='</li>';
 							$html+='<li class="td-operation">';
 								$html+='<p>';
@@ -344,7 +350,31 @@ $(document).ready(function() {
 	});
 
 
+	//商品库存
+	function stock(that){
+		var $stock = parseInt(that.parent('.item-amount').siblings('.stock').text());
+		var thisNum = that.parent().find('input').val();
+		var thisOutNum = that.parent().siblings('.outNum');
+		var thisStockNum = thisOutNum.find('.stockNum');
+		if (parseInt(thisNum) > $stock) {
+			thisOutNum.show('fast');
+		} else {
+			thisOutNum.hide('fast');
+		}
+		thisStockNum.text($stock);
+	}
 
+/*	//商品库存
+	function stockInput(that){
+		var $stock = parseInt(that.parent('.item-amount').siblings('.stock').text());
+		var thisNum = that.val();
+		var thisOutNum = that.parent().siblings('.outNum');
+		if (parseInt(thisNum) > $stock) {
+			thisOutNum.show('fast');
+		} else {
+			thisOutNum.hide('fast');
+		}
+	}*/
 
 
 	//商品数量的输入框
@@ -361,6 +391,8 @@ $(document).ready(function() {
 				return true;
 			};
 		} else if(event.type ==='keyup'){
+			stock($(this));
+			var $stock = parseInt($(this).parent('.item-amount').siblings('.stock').text());
 			var thisParent = $(this).parents('.td-amount');
 			var thisInput = $(this).parent('.item-amount');
 			var $text = thisParent.siblings('.td-price').find('span').text();
@@ -368,7 +400,13 @@ $(document).ready(function() {
 			var keyCode = event.keyCode ? event.keyCode : event.charCode ;
 			if (keyCode !== 8) {
 				var num = parseInt($(this).val()) || 0;
-				num = num < 1 ? 1 : num;
+				if (num < 1) {
+					num = 2;
+				} else if(num > $stock){
+					num = $stock;
+				} else {
+					num = num;
+				}
 				var num = $(this).val();
 				tdSum.text($text * num + '.00');
 			};
@@ -376,13 +414,21 @@ $(document).ready(function() {
 			tdSum.text($text * anNum +'.00');
 			getCount();
 		} else {
+			stock($(this));
+			var $stock = parseInt($(this).parent('.item-amount').siblings('.stock').text());
 			var thisParent = $(this).parents('.td-amount');
 			var thisInput = $(this).parent('.item-amount');
 			var $text = thisParent.siblings('.td-price').find('span').text();
 			var tdSum = thisParent.siblings('.td-sum').find('span');
 			var keyCode = event.keyCode ? event.keyCode : event.keyCode;
-			var num = parseInt($(this).val()) || 0;
-			num = num < 1 ? 1 : num ;
+			var num = parseInt($(this).val());
+			if (num > $stock) {
+				num = $stock;
+			} else if(num < 1){
+				num = 1;
+			} else {
+				num = num;
+			}
 			$(this).val(num);
 			var anNum = $(this).val();
 			tdSum.text($text * anNum +'.00');
@@ -392,35 +438,43 @@ $(document).ready(function() {
 
 	//商品数量增加
 	$('body').on('click','.amount-right',function(event){
+		var $stock = parseInt($(this).parent('.item-amount').siblings('.stock').text());
 		var thisParent = $(this).parents('.td-amount');
 		var thisInput = $(this).parent('.item-amount');
 		var $text = thisParent.siblings('.td-price').find('span').text();
 		var tdSum = thisParent.siblings('.td-sum').find('span');
 		var num = thisInput.find('input').val();
-		num++;
-		thisInput.find('input').val(num);
+		if (num < $stock) {
+			num++;
+			thisInput.find('input').val(num);
+		} else {
+			$(this).parent().siblings('.outNum').show('fast');
+		}
 		$('.amount-left').css({
 			'cursor':'pointer',
 			'color':'#444'
 		})
 		tdSum.text($text * num + '.00');
 		getCount();
+		// stock($(this));
 		return false;
 	});
 
 	//商品数量减少
 	$('body').on('click','.amount-left',function(event){
+		var $stock = parseInt($(this).parent('.item-amount').siblings('.stock').text());
 		var thisParent = $(this).parents('.td-amount');
 		var thisInput = $(this).parent('.item-amount');
 		var $text = thisParent.siblings('.td-price').find('span').text();
 		var tdSum = thisParent.siblings('.td-sum').find('span');
-		var num = thisInput.find('input').val();
+		var num = parseInt(thisInput.find('input').val());
 		if (num > 1 ) {
-			num--;
+			num-1;
 			thisInput.find('input').val(num);
 		}
 		tdSum.text($text * num +'.00');
 		getCount();
+		stock($(this));
 		return false;
 	});
 
@@ -493,7 +547,7 @@ $(document).ready(function() {
 	});
 
 
-	//fixed中的全选元素
+	//fixed中的全选按钮
 	$('.all-selected').on('click', '.allSelected2', function(event) {
 		if ($(this).prop('checked')) {
 			$(':checkbox').prop('checked',true);
@@ -743,7 +797,7 @@ $(document).ready(function() {
 		getCountMobile();
 		return false;
 	});
-	
+
 	//Mobile商品数量减少
 	$('body').on('click','.amount-left',function(event){
 		var thisParent = $(this).parents('.td-amount');
