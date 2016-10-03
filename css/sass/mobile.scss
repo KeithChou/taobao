@@ -88,9 +88,46 @@ body{
 		}
 	}
 }
-.shopInfo{
+.shopInfo1{
 	background-color:#fff;
+	position:relative;
 }
+
+
+.changeCount{
+	position:absolute;
+	right: 0.4rem;
+	top:0.3rem;
+	text-align:center;
+	a{
+		text-decoration:none;
+		color:#878787;
+		display:inline-block;
+		font-size:0.4rem;
+		height:0.55rem;
+		width:0.55rem;
+		line-height:0.55rem;
+		background-color:#fff;
+		border:1px solid #9c9c9c;
+		@include border-radius(5px);
+	}
+	.substrCount{
+		margin-right: 0.1rem;
+	}
+	.plusCount{
+		margin-left:0.1rem;
+	}
+	input{
+		width:1rem;
+		border:1px solid #9c9c9c;
+		outline:none;
+		color:#878787;
+		text-align:center;
+		padding:0.07rem 0.3rem;
+		@include border-radius(5px);
+	}
+}
+
 
 .commodityInfo{
 	border:none;
@@ -142,14 +179,17 @@ body{
 	line-clamp:2;
 	text-overflow:ellipsis;
 	word-break:break-all;
-	height:0.9rem;
+	height:0.95rem;
 	@include flexbox((
 		display:box,
 		box-orient:vertical
 	),1);
+	a{
+		line-height:0.5rem;
+	}
 }
 
-.td-inner{
+.td-inner1{
 	padding-left:0.15rem;
 	@include align-self(center);
 }
@@ -169,6 +209,10 @@ body{
 		color:#999;
 		text-decoration: line-through;
 	}
+	.unitPrice{
+		font-style:normal;
+		display:none;
+	}
 }
 
 .footer{
@@ -179,13 +223,13 @@ body{
 	@include align-items(center);
 }
 
-.all-selected{
+.all-selected1{
 	width:1.56rem;
 	margin-left:0.4rem;
 	position:relative;
 	input{
 		position:absolute;
-		margin-top:0.59rem;
+		top:0.05rem;
 	}
 	label{
 		margin-left:0.6rem;
@@ -200,7 +244,7 @@ body{
 	@include display-flex();
 	@include flex-direction(column);
 	@include align-items(flex-end);
-	.totalSum{
+	.totalAccount{
 		color:#758188;
 		font-size:0.3rem;
 	}
