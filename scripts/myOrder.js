@@ -45,17 +45,23 @@ $(document).ready(function() {
 
 	//搜索框下拉列表
 	$('body').on('keyup','.header-search-input',function(event){
+		//获取输入的值
 		var $val = $(this).val();
+		//使用$.get()方法，并且将查询的值放在URI后面
 		$.get('search.json',{'Query':$val}, function(data) {
 			for (var i = 0; i < data.length; i++) {
+				//如果值与json中的query字段匹配，动态加载html
 				if ($val === data[i][0].Query) {
 					var $data = data[i][0].Results[0].Suggests;
 					var $html= '';
 					$html+='<ul>';
+					//全局函数$.each，也可以使用for循环
 					$.each($data, function(index, val) {
 						$html+='<li>'+val.Txt+'</li>';
 					});
 					$html+='</ul>';
+					//下列列表dispaly:none的，当符合条件后
+					//调用show()函数，然后设定css样式
 					$('.list').html($html).show().css({
 						'position':'absolute',
 						'left':0,
@@ -63,14 +69,18 @@ $(document).ready(function() {
 					})
 				}
 			}
+
+			//当点击每一条li数据时，会相应的将数据作为搜索框的值
 			$('.list li').click(function(event) {
 				var $liText = $(this).text();
 				$('.header-search-input').val($liText);
 			});
 		});
+		//如果值为空，则隐藏整个列表
 		if ($(this).val() === '') {
 			$('.list').hide();
 		}
+		//按下回车时，调用shoppingCart()函数。
 		if (event.which === 13) {
 			shoppingCart();
 		}
@@ -220,16 +230,28 @@ $(document).ready(function() {
 
 	//购物车存放产品--- 通用function
 	function shoppingCart(){
+		//获取输入框的值，用于字符串匹配
 		var $val = $('.header-search-input').val();
 		$.get('basketballShoes.json',{'Query':$val}, function(data) {
 			for (var i = 0; i < data.length; i++) {
 				if ($val === data[i][0].Query) {
+					//字符串匹配
+					//当输入'lan'时，会匹配第一个数组
+					//当输入'音速3'时，会匹配第二个数组。
+					//也可以自行修改字符串匹配规则。
 					var $data = data[i][0].Results[0].Suggests;
 					var $html = '';
+					//使用$.each()方法循环每一个$data，
+					//然后动态加载html,
+					//把相应的商品信息放到指定的.commodityContainer容器中
 					$.each($data, function(index, val) {
 						$html+='<div class="mainCommodity">';
 						$html+='<div class="shopInfo">';
 							$html+='<div class="shopMsg">';
+								//$.each()中回调函数中的第二个参数指定的是每一个值，
+								//通过点操作来获取每个字段。
+								//比如val.label 就为 '李宁2016新款男子篮球鞋音速3高帮反弹篮球场地鞋ABAL031'。
+								//下面的操作相同。
 								$html+='<input type="checkbox" name="shopMsg" id="'+val.label+'" class="shopMsg-input" autocomplete="off">';
 								$html+='<label for="'+val.label+'">';
 								$html+='店铺：';
@@ -318,6 +340,9 @@ $(document).ready(function() {
 						$html+='</ul>';
 						$html+='</div>';
 						$html+='</div>';
+						//将动态加载的html放到指定的容器中，
+						//这里首先应该在html中放放上一个空容器
+						//<div className="commidityContainer"></div>
 						$('.commodityContainer').html($html);
 					});
 				}
@@ -364,17 +389,6 @@ $(document).ready(function() {
 		thisStockNum.text($stock);
 	}
 
-/*	//商品库存
-	function stockInput(that){
-		var $stock = parseInt(that.parent('.item-amount').siblings('.stock').text());
-		var thisNum = that.val();
-		var thisOutNum = that.parent().siblings('.outNum');
-		if (parseInt(thisNum) > $stock) {
-			thisOutNum.show('fast');
-		} else {
-			thisOutNum.hide('fast');
-		}
-	}*/
 
 
 	//商品数量的输入框
