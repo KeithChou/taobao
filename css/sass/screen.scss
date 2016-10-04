@@ -393,6 +393,9 @@ input{
 .td-inner{
 	padding-left: 10px;
 	margin-top: -2px;
+	input{
+		cursor:pointer;
+	}
 }
 .th-price{
 	@extend %thLeft;
