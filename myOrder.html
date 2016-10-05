@@ -766,6 +766,98 @@
 
 	</div>
 	<script src='scripts/jquery-2.2.1.min.js'></script>
+	<script src='scripts/template.js'></script>
+	<script id='basketBallShoes' type="text/html">
+		{{each Suggests as value i}}
+			<div class="mainCommodity">
+				<div class="shopInfo">
+					<div class="shopMsg">
+							<input type="checkbox" name="shopMsg" id='{{value.label}}' class='shopMsg-input' autocomplete="off">
+							<label for="{{value.label}}">店铺：
+						<a href="#">{{value.shop}}</a>
+					</div>
+				</div>
+				<div class="commodityInfo">
+					<ul>
+						<li class='td-chk'>
+							<div class="td-inner">
+								<input type="checkbox" name='checkbox' autocomplete="off" >
+							</div>
+						</li>
+						<li class='td-item'>
+							<div class="td-inner">
+								<a href="#" class='desImg'>
+									<img src="{{value.image}}" alt='{{value.Txt}}'>
+								</a>
+								<div class="item-info">
+									<div class="item-basis-info">
+										<a href="#">{{value.Txt}}</a>
+									</div>
+									<div class="item-other-info">
+										<div class="item-other-space"></div>
+										<div class="item-other-list">
+											<a href="#" title='支持信用卡支付'>
+												<img src="{{value.bandCard}}" alt="支持信用卡支付">
+											</a>
+											<a href="#" class='sevenDay' title='7天无理由'>
+												<img src="{{value.sevenDay}}" alt="7天无理由">
+											</a>
+											<a href="#" title='消费者保障服务'>
+												<img src="{{value.guarantee}}" alt="消费者保障服务">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class='td-info'>
+							<div class="td-info-msg">
+								<p>{{value.color}}</p>
+								<p>{{value.size}}</p>
+							</div>
+						</li>
+						<li class='td-price'>
+							<div class="td-inner">
+								<p class='non-discount'>{{value.nonDiscount}}</p>
+								<p class='discount'>￥<span>{{value.num}}.00</span></p>
+								<div class="promotion">
+									卖家促销
+									<i class='promotionIcon'></i>
+								</div>
+								<div class="proSlidedown">
+									<p class='newPro'>卖家促销：新品大特价</p>
+									<p>优惠：￥200.00</p>
+								</div>
+							</div>
+						</li>
+						<li class='td-amount'>
+							<div class="item-amount">
+								<a href="#" class='amount-left amount-color'>-</a>
+								<input type="text" name='amountNum' value='1' autocomplete="off">
+								<a href="#" class="amount-right">+</a>
+							</div>
+							<div class="stock">
+								{{value.max}}
+							</div>
+							<div class="outNum">
+								<span class="instr">最多只能购买</span>
+								<span class='stockNum'></span><!--
+								--><em>件</em>
+							</div>
+
+							</li>
+						<li class='td-sum'>
+							<em>￥</em><!--
+							--><span>{{value.num}}</span>
+						</li>
+						<li class='td-operation'>
+							<p><a href="#" class='delete'>删除</a></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		{{/each}}
+	</script>
 	<script src='scripts/myOrder.js'></script>
 </body>
 </html>
