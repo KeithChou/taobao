@@ -52,14 +52,20 @@ $(document).ready(function() {
 			for (var i = 0; i < data.length; i++) {
 				//如果值与json中的query字段匹配，动态加载html
 				if ($val === data[i][0].Query) {
-					var $data = data[i][0].Results[0].Suggests;
-					var $html= '';
-					$html+='<ul>';
-					//全局函数$.each，也可以使用for循环
-					$.each($data, function(index, val) {
-						$html+='<li>'+val.Txt+'</li>';
-					});
-					$html+='</ul>';
+					var results = data[i][0].Results[0];
+					/*
+						var $html= '';
+						$html+='<ul>';
+						//全局函数$.each，也可以使用for循环
+						$.each($data, function(index, val) {
+							$html+='<li>'+val.Txt+'</li>';
+						});
+						$html+='</ul>';
+					*/
+
+					//js模板引擎
+					var $html = template('search',results);
+
 					//下列列表dispaly:none的，当符合条件后
 					//调用show()函数，然后设定css样式
 					$('.list').html($html).show().css({
@@ -95,19 +101,24 @@ $(document).ready(function() {
 			var index = thisInfo.index();
 			previous = thisInfo.prev();
 			var itemBasisInfo = thisInfo.find('.item-basis-info a').text().trim();
-			var html = '';
 			thisInfo.detach();
-			html +='<div class="undo-wrapper">';
-			html +='<div class="deleteCom">';
-			html +='<p>';
-			html +='成功删除';
-			html +='<em>1</em>';
-			html +='件宝贝，';
-			html +='如果有误，可';
-			html +='<a href="#" class="turnBack">撤销本次删除</a>';
-			html +='</p>';
-			html +='</div>';
-			html +='</div>';
+			/*
+				var html = '';
+				html +='<div class="undo-wrapper">';
+				html +='<div class="deleteCom">';
+				html +='<p>';
+				html +='成功删除';
+				html +='<em>1</em>';
+				html +='件宝贝，';
+				html +='如果有误，可';
+				html +='<a href="#" class="turnBack">撤销本次删除</a>';
+				html +='</p>';
+				html +='</div>';
+				html +='</div>';
+			*/
+			//JS引擎模板
+			var html = template('delete');
+			
 			previous.after(html);
 			return false;
 	});
