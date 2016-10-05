@@ -858,6 +858,25 @@
 			</div>
 		{{/each}}
 	</script>
+	<script id="search" type="text/html">
+		<ul>
+			{{each Suggests as value i}}
+				<li>{{value.Txt}}</li>
+			{{/each}}
+		</ul>
+	</script>
+	<script id='delete' type='text/html'>
+		<div class="undo-wrapper">
+			<div class="deleteCom">
+				<p>
+					成功删除
+					<em>1</em>
+					件宝贝，如果有无，可
+					<a href="#" class='turnBack'>撤销本次删除</a>
+				</p>
+			</div>
+		</div>
+	</script>
 	<script src='scripts/myOrder.js'></script>
 </body>
 </html>
