@@ -125,107 +125,107 @@ $(document).ready(function() {
 		$('.list').hide();
 	});
 
-/*
-	//降价商品查询
-	$('.switch-cart-1').click(function(event) {
-		$.get('discount.json', function(data) {
-			for (var i = 0; i < data.length; i++) {
-				var $data = data[i][0].Results[0].Suggests;
-				var $html = '';
-				$.each($data, function(index, val) {
-					$html+='<div class="mainCommodity">';
-					$html+='<div class="shopInfo">';
-						$html+='<div class="shopMsg">';
-							$html+='<input type="checkbox" name="shopMsg" id="liningBas" class="shopMsg-input" autocomplete="off">';
-							$html+='<label for="liningBas">';
-							$html+='店铺：';
-							$html+='</label>';
-							$html+='<a href="#">'+val.shop+'';
-							$html+='</a>'
-							$html+='</div>';
-					$html+='</div>';
-					$html+='<div class="commodityInfo">';
-					$html+='<ul>';
-						$html+='<li class="td-chk">';
-							$html+='<div class="td-inner">';
-							$html+='<input type="checkbox" name="checkbox" autocomplete="off">';
-							$html+='</div>';
-						$html+='</li>';
-						$html+='<li class="td-item">';
-							$html+='<div class="td-inner">';
-								$html+='<a class="desImg" href="#">';
-								$html+='<img alt="'+val.Txt+'" src="'+val.image+'">';
-								$html+='</a>';
-								$html+='<div class="item-info">';
-									$html+='<div class="item-basis-info">';
-										$html+='<a href="#">'+val.Txt+'';
-										$html+='</a>';
-									$html+='</div>';
-									$html+='<div class="item-other-info">';
-										$html+='<div class="item-other-space"></div>';
-										$html+='<div class="item-other-list">';
-											$html+='<a href="#" title="支持信用卡支付">';
-												$html+='<img alt="支持信用卡支付" src="'+val.bandCard+'">';
-											$html+='</a>';
-											$html+='<a href="#" title="7天无理由" class="sevenDay">';
-												$html+='<img alt="7天无理由" src="'+val.sevenDay+'">';
-											$html+='</a>';
-											$html+='<a href="#" title="消费者保障服务">';
-												$html+='<img alt="消费者保障服务" src="'+val.guarantee+'">';
+	/*
+		//降价商品查询
+		$('.switch-cart-1').click(function(event) {
+			$.get('discount.json', function(data) {
+				for (var i = 0; i < data.length; i++) {
+					var $data = data[i][0].Results[0].Suggests;
+					var $html = '';
+					$.each($data, function(index, val) {
+						$html+='<div class="mainCommodity">';
+						$html+='<div class="shopInfo">';
+							$html+='<div class="shopMsg">';
+								$html+='<input type="checkbox" name="shopMsg" id="liningBas" class="shopMsg-input" autocomplete="off">';
+								$html+='<label for="liningBas">';
+								$html+='店铺：';
+								$html+='</label>';
+								$html+='<a href="#">'+val.shop+'';
+								$html+='</a>'
+								$html+='</div>';
+						$html+='</div>';
+						$html+='<div class="commodityInfo">';
+						$html+='<ul>';
+							$html+='<li class="td-chk">';
+								$html+='<div class="td-inner">';
+								$html+='<input type="checkbox" name="checkbox" autocomplete="off">';
+								$html+='</div>';
+							$html+='</li>';
+							$html+='<li class="td-item">';
+								$html+='<div class="td-inner">';
+									$html+='<a class="desImg" href="#">';
+									$html+='<img alt="'+val.Txt+'" src="'+val.image+'">';
+									$html+='</a>';
+									$html+='<div class="item-info">';
+										$html+='<div class="item-basis-info">';
+											$html+='<a href="#">'+val.Txt+'';
 											$html+='</a>';
 										$html+='</div>';
+										$html+='<div class="item-other-info">';
+											$html+='<div class="item-other-space"></div>';
+											$html+='<div class="item-other-list">';
+												$html+='<a href="#" title="支持信用卡支付">';
+													$html+='<img alt="支持信用卡支付" src="'+val.bandCard+'">';
+												$html+='</a>';
+												$html+='<a href="#" title="7天无理由" class="sevenDay">';
+													$html+='<img alt="7天无理由" src="'+val.sevenDay+'">';
+												$html+='</a>';
+												$html+='<a href="#" title="消费者保障服务">';
+													$html+='<img alt="消费者保障服务" src="'+val.guarantee+'">';
+												$html+='</a>';
+											$html+='</div>';
+										$html+='</div>';
+									$html+='</div>';
+								$html+'</div>';
+							$html+='</li>';
+							$html+='<li class="td-info">';
+								$html+='<div class="td-info-msg">';
+									$html+='<p>'+val.color+'</p>';
+									$html+='<p>'+val.size+'</p>';
+								$html+='</div>';
+							$html+='</li>';
+							$html+='<li class="td-price">';
+								$html+='<div class="td-inner">';
+									$html+='<p class="non-discount">'+val.nonDiscount+'</p>';
+									$html+='<p class="discount">￥';
+										$html+='<span>'+val.num+'</span>';
+									$html+='</p>';
+									$html+='<div class="promotion">卖家促销';
+										$html+='<i class="promotionIcon"></i>';
+									$html+='</div>';
+									$html+='<div class="proSlidedown">';
+										$html+='<p class="newPro">卖家促销：秋季特惠</p>';
+										$html+='<p>优惠：￥200.00</p>';
 									$html+='</div>';
 								$html+='</div>';
-							$html+'</div>';
-						$html+='</li>';
-						$html+='<li class="td-info">';
-							$html+='<div class="td-info-msg">';
-								$html+='<p>'+val.color+'</p>';
-								$html+='<p>'+val.size+'</p>';
-							$html+='</div>';
-						$html+='</li>';
-						$html+='<li class="td-price">';
-							$html+='<div class="td-inner">';
-								$html+='<p class="non-discount">'+val.nonDiscount+'</p>';
-								$html+='<p class="discount">￥';
-									$html+='<span>'+val.num+'</span>';
+							$html+='</li>';
+							$html+='<li class="td-amount">';
+								$html+='<div class="item-amount">';
+									$html+='<a href="#" class="amount-left amount-color">-</a>';
+									$html+='<input type="text" name="amountNum" value="1" autocomplete="off" />';
+									$html+='<a href="#" class="amount-right">+</a>';
+								$html+='</div>';
+							$html+='</li>';
+							$html+='<li class="td-sum">';
+								$html+='<em>￥</em>'
+								$html+='<span>'+val.num+'</span>';
+							$html+='</li>';
+							$html+='<li class="td-operation">';
+								$html+='<p>';
+									$html+='<a href="#">删除</a>';
 								$html+='</p>';
-								$html+='<div class="promotion">卖家促销';
-									$html+='<i class="promotionIcon"></i>';
-								$html+='</div>';
-								$html+='<div class="proSlidedown">';
-									$html+='<p class="newPro">卖家促销：秋季特惠</p>';
-									$html+='<p>优惠：￥200.00</p>';
-								$html+='</div>';
-							$html+='</div>';
-						$html+='</li>';
-						$html+='<li class="td-amount">';
-							$html+='<div class="item-amount">';
-								$html+='<a href="#" class="amount-left amount-color">-</a>';
-								$html+='<input type="text" name="amountNum" value="1" autocomplete="off" />';
-								$html+='<a href="#" class="amount-right">+</a>';
-							$html+='</div>';
-						$html+='</li>';
-						$html+='<li class="td-sum">';
-							$html+='<em>￥</em>'
-							$html+='<span>'+val.num+'</span>';
-						$html+='</li>';
-						$html+='<li class="td-operation">';
-							$html+='<p>';
-								$html+='<a href="#">删除</a>';
-							$html+='</p>';
-						$html+='</li>';
-					$html+='</ul>';
-					$html+='</div>';
-					$html+='</div>';
-					$('.commodityContainer').html($html);
-				});
-			}
+							$html+='</li>';
+						$html+='</ul>';
+						$html+='</div>';
+						$html+='</div>';
+						$('.commodityContainer').html($html);
+					});
+				}
+			});
+			return false;
 		});
-		return false;
-	});
 
-*/
+	*/
 
 
 	//购物车存放产品--- 通用function
@@ -258,7 +258,7 @@ $(document).ready(function() {
 								$html+='</label>';
 								$html+='<a href="#">'+val.shop+'';
 								$html+='</a>'
-								$html+='</div>';
+							$html+='</div>';
 						$html+='</div>';
 						$html+='<div class="commodityInfo">';
 						$html+='<ul>';
@@ -311,7 +311,7 @@ $(document).ready(function() {
 									$html+='</div>';
 									$html+='<div class="proSlidedown">';
 										$html+='<p class="newPro">卖家促销：秋季特惠</p>';
-										$html+='<p>优惠：￥200.00</p>';
+										$html+='<p>优惠：￥'+val.discount+'</p>';
 									$html+='</div>';
 								$html+='</div>';
 							$html+='</li>';
