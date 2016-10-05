@@ -240,111 +240,124 @@ $(document).ready(function() {
 					//当输入'音速3'时，会匹配第二个数组。
 					//也可以自行修改字符串匹配规则。
 					var $data = data[i][0].Results[0].Suggests;
-					var $html = '';
-					//使用$.each()方法循环每一个$data，
-					//然后动态加载html,
-					//把相应的商品信息放到指定的.commodityContainer容器中
-					$.each($data, function(index, val) {
-						$html+='<div class="mainCommodity">';
-						$html+='<div class="shopInfo">';
-							$html+='<div class="shopMsg">';
-								//$.each()中回调函数中的第二个参数指定的是每一个值，
-								//通过点操作来获取每个字段。
-								//比如val.label 就为 '李宁2016新款男子篮球鞋音速3高帮反弹篮球场地鞋ABAL031'。
-								//下面的操作相同。
-								$html+='<input type="checkbox" name="shopMsg" id="'+val.label+'" class="shopMsg-input" autocomplete="off">';
-								$html+='<label for="'+val.label+'">';
-								$html+='店铺：';
-								$html+='</label>';
-								$html+='<a href="#">'+val.shop+'';
-								$html+='</a>'
-							$html+='</div>';
-						$html+='</div>';
-						$html+='<div class="commodityInfo">';
-						$html+='<ul>';
-							$html+='<li class="td-chk">';
-								$html+='<div class="td-inner">';
-								$html+='<input type="checkbox" name="checkbox" autocomplete="off">';
+					var results = data[i][0].Results[0];
+					
+					/*第一种方法：手写拼接字符串，效率低，易出错，
+					结构与数据未分离，不推荐使用这种方法拼接字符串*/
+					/*
+						var $html = '';
+						//使用$.each()方法循环每一个$data，
+						//然后动态加载html,
+						//把相应的商品信息放到指定的.commodityContainer容器中
+						$.each($data, function(index, val) {
+							$html+='<div class="mainCommodity">';
+							$html+='<div class="shopInfo">';
+								$html+='<div class="shopMsg">';
+									//$.each()中回调函数中的第二个参数指定的是每一个值，
+									//通过点操作来获取每个字段。
+									//比如val.label 就为 '李宁2016新款男子篮球鞋音速3高帮反弹篮球场地鞋ABAL031'。
+									//下面的操作相同。
+									$html+='<input type="checkbox" name="shopMsg" id="'+val.label+'" class="shopMsg-input" autocomplete="off">';
+									$html+='<label for="'+val.label+'">';
+									$html+='店铺：';
+									$html+='</label>';
+									$html+='<a href="#">'+val.shop+'';
+									$html+='</a>'
 								$html+='</div>';
-							$html+='</li>';
-							$html+='<li class="td-item">';
-								$html+='<div class="td-inner">';
-									$html+='<a class="desImg" href="#">';
-									$html+='<img alt="'+val.Txt+'" src="'+val.image+'">';
-									$html+='</a>';
-									$html+='<div class="item-info">';
-										$html+='<div class="item-basis-info">';
-											$html+='<a href="#">'+val.Txt+'';
-											$html+='</a>';
-										$html+='</div>';
-										$html+='<div class="item-other-info">';
-											$html+='<div class="item-other-space"></div>';
-											$html+='<div class="item-other-list">';
-												$html+='<a href="#" title="支持信用卡支付">';
-													$html+='<img alt="支持信用卡支付" src="'+val.bandCard+'">';
-												$html+='</a>';
-												$html+='<a href="#" title="7天无理由" class="sevenDay">';
-													$html+='<img alt="7天无理由" src="'+val.sevenDay+'">';
-												$html+='</a>';
-												$html+='<a href="#" title="消费者保障服务">';
-													$html+='<img alt="消费者保障服务" src="'+val.guarantee+'">';
+							$html+='</div>';
+							$html+='<div class="commodityInfo">';
+							$html+='<ul>';
+								$html+='<li class="td-chk">';
+									$html+='<div class="td-inner">';
+									$html+='<input type="checkbox" name="checkbox" autocomplete="off">';
+									$html+='</div>';
+								$html+='</li>';
+								$html+='<li class="td-item">';
+									$html+='<div class="td-inner">';
+										$html+='<a class="desImg" href="#">';
+										$html+='<img alt="'+val.Txt+'" src="'+val.image+'">';
+										$html+='</a>';
+										$html+='<div class="item-info">';
+											$html+='<div class="item-basis-info">';
+												$html+='<a href="#">'+val.Txt+'';
 												$html+='</a>';
 											$html+='</div>';
+											$html+='<div class="item-other-info">';
+												$html+='<div class="item-other-space"></div>';
+												$html+='<div class="item-other-list">';
+													$html+='<a href="#" title="支持信用卡支付">';
+														$html+='<img alt="支持信用卡支付" src="'+val.bandCard+'">';
+													$html+='</a>';
+													$html+='<a href="#" title="7天无理由" class="sevenDay">';
+														$html+='<img alt="7天无理由" src="'+val.sevenDay+'">';
+													$html+='</a>';
+													$html+='<a href="#" title="消费者保障服务">';
+														$html+='<img alt="消费者保障服务" src="'+val.guarantee+'">';
+													$html+='</a>';
+												$html+='</div>';
+											$html+='</div>';
+										$html+='</div>';
+									$html+'</div>';
+								$html+='</li>';
+								$html+='<li class="td-info">';
+									$html+='<div class="td-info-msg">';
+										$html+='<p>'+val.color+'</p>';
+										$html+='<p>'+val.size+'</p>';
+									$html+='</div>';
+								$html+='</li>';
+								$html+='<li class="td-price">';
+									$html+='<div class="td-inner">';
+										$html+='<p class="non-discount">'+val.nonDiscount+'</p>';
+										$html+='<p class="discount">￥';
+											$html+='<span>'+val.num+'.00</span>';
+										$html+='</p>';
+										$html+='<div class="promotion">卖家促销';
+											$html+='<i class="promotionIcon"></i>';
+										$html+='</div>';
+										$html+='<div class="proSlidedown">';
+											$html+='<p class="newPro">卖家促销：秋季特惠</p>';
+											$html+='<p>优惠：￥'+val.disc+'</p>';
 										$html+='</div>';
 									$html+='</div>';
-								$html+'</div>';
-							$html+='</li>';
-							$html+='<li class="td-info">';
-								$html+='<div class="td-info-msg">';
-									$html+='<p>'+val.color+'</p>';
-									$html+='<p>'+val.size+'</p>';
-								$html+='</div>';
-							$html+='</li>';
-							$html+='<li class="td-price">';
-								$html+='<div class="td-inner">';
-									$html+='<p class="non-discount">'+val.nonDiscount+'</p>';
-									$html+='<p class="discount">￥';
-										$html+='<span>'+val.num+'.00</span>';
+								$html+='</li>';
+								$html+='<li class="td-amount">';
+									$html+='<div class="item-amount">';
+										$html+='<a href="#" class="amount-left amount-color">-</a>';
+										$html+='<input type="text" name="amountNum" value="1" autocomplete="off" />';
+										$html+='<a href="#" class="amount-right">+</a>';
+									$html+='</div>';
+									$html+='<div class="stock">'+val.max+'</div>';
+									$html+='<div class="outNum">';
+										$html+='<span class="instr">最多只能购买</span>';
+										$html+='<span class="stockNum"></span>';
+										$html+='<em>件</em>';
+									$html+='</div>';
+								$html+='</li>';
+								$html+='<li class="td-sum">';
+									$html+='<em>￥</em>'
+									$html+='<span>'+val.num+'.00</span>';
+								$html+='</li>';
+								$html+='<li class="td-operation">';
+									$html+='<p>';
+										$html+='<a href="#" class="delete">删除</a>';
 									$html+='</p>';
-									$html+='<div class="promotion">卖家促销';
-										$html+='<i class="promotionIcon"></i>';
-									$html+='</div>';
-									$html+='<div class="proSlidedown">';
-										$html+='<p class="newPro">卖家促销：秋季特惠</p>';
-										$html+='<p>优惠：￥'+val.discount+'</p>';
-									$html+='</div>';
-								$html+='</div>';
-							$html+='</li>';
-							$html+='<li class="td-amount">';
-								$html+='<div class="item-amount">';
-									$html+='<a href="#" class="amount-left amount-color">-</a>';
-									$html+='<input type="text" name="amountNum" value="1" autocomplete="off" />';
-									$html+='<a href="#" class="amount-right">+</a>';
-								$html+='</div>';
-								$html+='<div class="stock">'+val.max+'</div>';
-								$html+='<div class="outNum">';
-									$html+='<span class="instr">最多只能购买</span>';
-									$html+='<span class="stockNum"></span>';
-									$html+='<em>件</em>';
-								$html+='</div>';
-							$html+='</li>';
-							$html+='<li class="td-sum">';
-								$html+='<em>￥</em>'
-								$html+='<span>'+val.num+'.00</span>';
-							$html+='</li>';
-							$html+='<li class="td-operation">';
-								$html+='<p>';
-									$html+='<a href="#" class="delete">删除</a>';
-								$html+='</p>';
-							$html+='</li>';
-						$html+='</ul>';
-						$html+='</div>';
-						$html+='</div>';
-						//将动态加载的html放到指定的容器中，
-						//这里首先应该在html中放放上一个空容器
-						//<div className="commidityContainer"></div>
-						$('.commodityContainer').html($html);
-					});
+								$html+='</li>';
+							$html+='</ul>';
+							$html+='</div>';
+							$html+='</div>';
+							//将动态加载的html放到指定的容器中，
+							//这里首先应该在html中放放上一个空容器
+							//<div className="commidityContainer"></div>
+							$('.commodityContainer').html($html);
+
+
+						});
+					*/
+
+					/*第二种方法：使用js模板引擎，结构与数据分离，
+					并且altTemplate效率高，速度快，推荐使用。*/
+					var $html = template('basketBallShoes',results);
+					$('.commodityContainer').html($html);
 				}
 			}
 		});
