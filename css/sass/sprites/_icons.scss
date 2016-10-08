@@ -1,0 +1,209 @@
+@import "compass/utilities/sprites/base";
+
+// General Sprite Defaults
+// You can override them before you import this file.
+$icons-sprite-dimensions : false !default;
+$icons-use-percentages   : false !default;
+$icons-position          : 0% !default;
+$icons-spacing           : 0 !default;
+$icons-repeat            : no-repeat !default;
+$icons-prefix            : '' !default;
+$icons-clean-up          : true !default;
+$icons-layout            : vertical !default;
+$icons-inline            : false !default;
+$icons-sort-by           : 'none' !default;
+$icons-class-separator   : $default-sprite-separator !default;
+$icons-sprite-base-class : ".icons#{$icons-class-separator}sprite" !default;
+
+  
+ // These variables control the generated sprite output
+ // You can override them selectively before you import this file.
+ 
+   $icons-adidas-position: $icons-position !default;
+   $icons-adidas-spacing:  $icons-spacing !default;
+   $icons-adidas-repeat:   $icons-repeat !default;
+ 
+   $icons-bankCard-position: $icons-position !default;
+   $icons-bankCard-spacing:  $icons-spacing !default;
+   $icons-bankCard-repeat:   $icons-repeat !default;
+ 
+   $icons-boyShoes-position: $icons-position !default;
+   $icons-boyShoes-spacing:  $icons-spacing !default;
+   $icons-boyShoes-repeat:   $icons-repeat !default;
+ 
+   $icons-fashionClo-position: $icons-position !default;
+   $icons-fashionClo-spacing:  $icons-spacing !default;
+   $icons-fashionClo-repeat:   $icons-repeat !default;
+ 
+   $icons-guarantee-position: $icons-position !default;
+   $icons-guarantee-spacing:  $icons-spacing !default;
+   $icons-guarantee-repeat:   $icons-repeat !default;
+ 
+   $icons-icons-s220e6c273c-position: $icons-position !default;
+   $icons-icons-s220e6c273c-spacing:  $icons-spacing !default;
+   $icons-icons-s220e6c273c-repeat:   $icons-repeat !default;
+ 
+   $icons-lining-bas-position: $icons-position !default;
+   $icons-lining-bas-spacing:  $icons-spacing !default;
+   $icons-lining-bas-repeat:   $icons-repeat !default;
+ 
+   $icons-lining-longClo-position: $icons-position !default;
+   $icons-lining-longClo-spacing:  $icons-spacing !default;
+   $icons-lining-longClo-repeat:   $icons-repeat !default;
+ 
+   $icons-maozi-position: $icons-position !default;
+   $icons-maozi-spacing:  $icons-spacing !default;
+   $icons-maozi-repeat:   $icons-repeat !default;
+ 
+   $icons-message-position: $icons-position !default;
+   $icons-message-spacing:  $icons-spacing !default;
+   $icons-message-repeat:   $icons-repeat !default;
+ 
+   $icons-sevenDay-position: $icons-position !default;
+   $icons-sevenDay-spacing:  $icons-spacing !default;
+   $icons-sevenDay-repeat:   $icons-repeat !default;
+ 
+   $icons-star-orange-position: $icons-position !default;
+   $icons-star-orange-spacing:  $icons-spacing !default;
+   $icons-star-orange-repeat:   $icons-repeat !default;
+ 
+   $icons-star_gray-position: $icons-position !default;
+   $icons-star_gray-spacing:  $icons-spacing !default;
+   $icons-star_gray-repeat:   $icons-repeat !default;
+ 
+   $icons-taobao-icon-position: $icons-position !default;
+   $icons-taobao-icon-spacing:  $icons-spacing !default;
+   $icons-taobao-icon-repeat:   $icons-repeat !default;
+ 
+   $icons-xuezi-position: $icons-position !default;
+   $icons-xuezi-spacing:  $icons-spacing !default;
+   $icons-xuezi-repeat:   $icons-repeat !default;
+ 
+   $icons-zhangjunyameimei-position: $icons-position !default;
+   $icons-zhangjunyameimei-spacing:  $icons-spacing !default;
+   $icons-zhangjunyameimei-repeat:   $icons-repeat !default;
+ 
+
+ $icons-sprites: sprite-map("icons/*.png",
+ 
+   $icons-adidas-position: $icons-adidas-position, 
+   $icons-adidas-spacing:  $icons-adidas-spacing, 
+   $icons-adidas-repeat:   $icons-adidas-repeat,
+ 
+   $icons-bankCard-position: $icons-bankCard-position, 
+   $icons-bankCard-spacing:  $icons-bankCard-spacing, 
+   $icons-bankCard-repeat:   $icons-bankCard-repeat,
+ 
+   $icons-boyShoes-position: $icons-boyShoes-position, 
+   $icons-boyShoes-spacing:  $icons-boyShoes-spacing, 
+   $icons-boyShoes-repeat:   $icons-boyShoes-repeat,
+ 
+   $icons-fashionClo-position: $icons-fashionClo-position, 
+   $icons-fashionClo-spacing:  $icons-fashionClo-spacing, 
+   $icons-fashionClo-repeat:   $icons-fashionClo-repeat,
+ 
+   $icons-guarantee-position: $icons-guarantee-position, 
+   $icons-guarantee-spacing:  $icons-guarantee-spacing, 
+   $icons-guarantee-repeat:   $icons-guarantee-repeat,
+ 
+   $icons-icons-s220e6c273c-position: $icons-icons-s220e6c273c-position, 
+   $icons-icons-s220e6c273c-spacing:  $icons-icons-s220e6c273c-spacing, 
+   $icons-icons-s220e6c273c-repeat:   $icons-icons-s220e6c273c-repeat,
+ 
+   $icons-lining-bas-position: $icons-lining-bas-position, 
+   $icons-lining-bas-spacing:  $icons-lining-bas-spacing, 
+   $icons-lining-bas-repeat:   $icons-lining-bas-repeat,
+ 
+   $icons-lining-longClo-position: $icons-lining-longClo-position, 
+   $icons-lining-longClo-spacing:  $icons-lining-longClo-spacing, 
+   $icons-lining-longClo-repeat:   $icons-lining-longClo-repeat,
+ 
+   $icons-maozi-position: $icons-maozi-position, 
+   $icons-maozi-spacing:  $icons-maozi-spacing, 
+   $icons-maozi-repeat:   $icons-maozi-repeat,
+ 
+   $icons-message-position: $icons-message-position, 
+   $icons-message-spacing:  $icons-message-spacing, 
+   $icons-message-repeat:   $icons-message-repeat,
+ 
+   $icons-sevenDay-position: $icons-sevenDay-position, 
+   $icons-sevenDay-spacing:  $icons-sevenDay-spacing, 
+   $icons-sevenDay-repeat:   $icons-sevenDay-repeat,
+ 
+   $icons-star-orange-position: $icons-star-orange-position, 
+   $icons-star-orange-spacing:  $icons-star-orange-spacing, 
+   $icons-star-orange-repeat:   $icons-star-orange-repeat,
+ 
+   $icons-star_gray-position: $icons-star_gray-position, 
+   $icons-star_gray-spacing:  $icons-star_gray-spacing, 
+   $icons-star_gray-repeat:   $icons-star_gray-repeat,
+ 
+   $icons-taobao-icon-position: $icons-taobao-icon-position, 
+   $icons-taobao-icon-spacing:  $icons-taobao-icon-spacing, 
+   $icons-taobao-icon-repeat:   $icons-taobao-icon-repeat,
+ 
+   $icons-xuezi-position: $icons-xuezi-position, 
+   $icons-xuezi-spacing:  $icons-xuezi-spacing, 
+   $icons-xuezi-repeat:   $icons-xuezi-repeat,
+ 
+   $icons-zhangjunyameimei-position: $icons-zhangjunyameimei-position, 
+   $icons-zhangjunyameimei-spacing:  $icons-zhangjunyameimei-spacing, 
+   $icons-zhangjunyameimei-repeat:   $icons-zhangjunyameimei-repeat,
+ 
+ $layout   : $icons-layout,
+ $cleanup  : $icons-clean-up,
+ $spacing  : $icons-spacing,
+ $position : $icons-position,
+ $sort-by  : $icons-sort-by
+ );
+
+
+// All sprites should extend this class
+// The icons-sprite mixin will do so for you.
+@if $icons-inline {
+  #{$icons-sprite-base-class} {
+    background-image: inline-sprite($icons-sprites);
+  } 
+} @else {
+  #{$icons-sprite-base-class} {
+    background-image: sprite-url($icons-sprites);
+    background-repeat: no-repeat;
+  }
+}
+//sass functions to return the dimensions of a sprite image as units
+
+  @function icons-sprite-width($name) {
+    @return sprite-width($icons-sprites, $name);
+  }
+
+  @function icons-sprite-height($name) {
+    @return sprite-height($icons-sprites, $name);
+  }
+
+
+// Use this to set the dimensions of an element
+// based on the size of the original image.
+@mixin icons-sprite-dimensions($name) {
+  @include sprite-dimensions($icons-sprites, $name)
+}
+
+// Move the background position to display the sprite.
+@mixin icons-sprite-position($name, $offset-x: 0, $offset-y: 0, $use-percentages: $icons-use-percentages) {
+  @include sprite-background-position($icons-sprites, $name, $offset-x, $offset-y, $use-percentages)
+}
+
+// Extends the sprite base class and set the background position for the desired sprite.
+// It will also apply the image dimensions if $dimensions is true.
+@mixin icons-sprite($name, $dimensions: $icons-sprite-dimensions, $offset-x: 0, $offset-y: 0, $use-percentages: $icons-use-percentages, $separator: $icons-class-separator) {
+  @extend #{$icons-sprite-base-class};
+  @include sprite($icons-sprites, $name, $dimensions, $offset-x, $offset-y, $use-percentages, $separator: $separator);
+}
+
+@mixin icons-sprites($sprite-names, $dimensions: $icons-sprite-dimensions, $prefix: sprite-map-name($icons-sprites), $offset-x: 0, $offset-y: 0, $use-percentages: $icons-use-percentages, $separator: $icons-class-separator) {
+  @include sprites($icons-sprites, $sprite-names, $icons-sprite-base-class, $dimensions, $prefix, $offset-x, $offset-y, $use-percentages, $separator: $separator)
+}
+
+// Generates a class for each sprited image.
+@mixin all-icons-sprites($dimensions: $icons-sprite-dimensions, $prefix: sprite-map-name($icons-sprites), $offset-x: 0, $offset-y: 0, $use-percentages: $icons-use-percentages, $separator: $icons-class-separator) {
+  @include icons-sprites(adidas bankCard boyShoes fashionClo guarantee icons-s220e6c273c lining-bas lining-longClo maozi message sevenDay star-orange star_gray taobao-icon xuezi zhangjunyameimei, $dimensions, $prefix, $offset-x, $offset-y, $use-percentages, $separator: $separator);
+}
