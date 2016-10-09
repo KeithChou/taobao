@@ -13,13 +13,10 @@
 							"discount":200,
 							"label":"liningBas",
 							"shop":"李宁官方网店",
-							"image":"css/images/lining-bas.png",
+							"image":"css/images/icons/lining-bas.png",
 							"color":"颜色分类：荧光果粉/木梅红",
 							"size":"鞋码：42",
-							"nonDiscount":"￥539.00",
-							"bandCard":"css/images/bankCard.png",
-							"sevenDay":"css/images/sevenDay.png",
-							"guarantee":"css/images/guarantee.png"
+							"nonDiscount":"￥539.00"
 						},
 						{
 							"Txt":" adidas阿迪达斯篮球男子篮球鞋Regulate",
@@ -28,13 +25,10 @@
 							"discount":120,
 							"label":"adidas",
 							"nonDiscount":"￥539.00",
-							"image":"css/images/adidas.png",
+							"image":"css/images/icons/adidas.png",
 							"color":"颜色分类：银金属/深藏青蓝",
 							"shop":"adidas官方旗舰店",
-							"size":"鞋码：43.5",
-							"bandCard":"css/images/bankCard.png",
-							"sevenDay":"css/images/sevenDay.png",
-							"guarantee":"css/images/guarantee.png"
+							"size":"鞋码：43.5"
 						}
 					]
 				}
@@ -54,13 +48,10 @@
 							"max":764,
 							"label":"liningBas",
 							"shop":"李宁官方网店",
-							"image":"css/images/lining-bas.png",
+							"image":"css/images/icons/lining-bas.png",
 							"color":"颜色分类：荧光果粉/木梅红",
 							"size":"鞋码：42",
-							"nonDiscount":"￥539.00",
-							"bandCard":"css/images/bankCard.png",
-							"sevenDay":"css/images/sevenDay.png",
-							"guarantee":"css/images/guarantee.png"
+							"nonDiscount":"￥539.00"
 						}
 					]
 				}
