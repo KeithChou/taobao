@@ -95,12 +95,20 @@ $(document).ready(function() {
 	//删除商品
 	var thisInfo;
 	var previous;
+	var next;
 	$('body').on('click','.delete',function(event){
 			var $this = $(event.target);
 			thisInfo = $this.parents('.mainCommodity');
-			var index = thisInfo.index();
 			previous = thisInfo.prev();
+			next = thisInfo.next();
 			var itemBasisInfo = thisInfo.find('.item-basis-info a').text().trim();
+			console.log($('.mainCommodity').last());
+			var html = template('delete');
+			if ($('.mainCommodity').first()) {
+				next.before(html);
+			} else {
+				previous.after(html);
+			};
 			thisInfo.detach();
 			/*
 				var html = '';
@@ -117,9 +125,6 @@ $(document).ready(function() {
 				html +='</div>';
 			*/
 			//JS引擎模板
-			var html = template('delete');
-			
-			previous.after(html);
 			return false;
 	});
 
