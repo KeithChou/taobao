@@ -521,6 +521,9 @@ input{
 		@extend %inline-common;
 		@include icons-sprite(zhangjunyameimei);
 	}
+	.desImg{
+		@extend %inline-common;
+	}
 	.item-info{
 		margin:-3px 0 0 91px;
 		padding-right:15px;

@@ -797,7 +797,7 @@ input {
 }
 
 /* line 472, ../sass/screen.scss */
-.commodityInfo .boyShoes, .commodityInfo .fashionClo, .commodityInfo .lining-bas, .commodityInfo .adidas, .commodityInfo .Nike, .commodityInfo .xuezi, .commodityInfo .zhangjunya {
+.commodityInfo .boyShoes, .commodityInfo .fashionClo, .commodityInfo .lining-bas, .commodityInfo .adidas, .commodityInfo .Nike, .commodityInfo .xuezi, .commodityInfo .zhangjunya, .commodityInfo .desImg {
   display: inline-block;
   float: left;
 }
@@ -860,35 +860,35 @@ input {
   height: 80px;
   width: 80px;
 }
-/* line 524, ../sass/screen.scss */
+/* line 527, ../sass/screen.scss */
 .commodityInfo .item-info {
   margin: -3px 0 0 91px;
   padding-right: 15px;
   min-height: 79px;
 }
-/* line 528, ../sass/screen.scss */
+/* line 531, ../sass/screen.scss */
 .commodityInfo .item-info a {
   text-decoration: none;
   color: #3c3c3c;
 }
-/* line 531, ../sass/screen.scss */
+/* line 534, ../sass/screen.scss */
 .commodityInfo .item-info a:hover {
   color: #f40;
   text-decoration: underline;
 }
-/* line 537, ../sass/screen.scss */
+/* line 540, ../sass/screen.scss */
 .commodityInfo .item-other-space {
   min-height: 26px;
   overflow: hidden;
 }
-/* line 541, ../sass/screen.scss */
+/* line 544, ../sass/screen.scss */
 .commodityInfo .bandCard {
   display: inline-block;
   background-position: 0 -85px;
   height: 11px;
   width: 16px;
 }
-/* line 545, ../sass/screen.scss */
+/* line 548, ../sass/screen.scss */
 .commodityInfo .sevenDay {
   display: inline-block;
   margin: 0 2px;
@@ -896,47 +896,47 @@ input {
   height: 16px;
   width: 16px;
 }
-/* line 550, ../sass/screen.scss */
+/* line 553, ../sass/screen.scss */
 .commodityInfo .guarantee {
   display: inline-block;
   background-position: 0 -271px;
   height: 16px;
   width: 14px;
 }
-/* line 554, ../sass/screen.scss */
+/* line 557, ../sass/screen.scss */
 .commodityInfo .td-info {
   min-height: 79px;
 }
-/* line 558, ../sass/screen.scss */
+/* line 561, ../sass/screen.scss */
 .commodityInfo .td-info-msg {
   min-height: 84px;
 }
-/* line 560, ../sass/screen.scss */
+/* line 563, ../sass/screen.scss */
 .commodityInfo .td-info-msg p {
   margin: 0 5px 0 15px;
   color: #9c9c9c;
   padding-bottom: 3px;
   margin-top: -2px;
 }
-/* line 567, ../sass/screen.scss */
+/* line 570, ../sass/screen.scss */
 .commodityInfo .td-price {
   min-height: 79px;
 }
-/* line 570, ../sass/screen.scss */
+/* line 573, ../sass/screen.scss */
 .commodityInfo .td-price .non-discount {
   font-size: 1em;
   color: #9c9c9c;
   text-decoration: line-through;
 }
-/* line 575, ../sass/screen.scss */
+/* line 578, ../sass/screen.scss */
 .commodityInfo .td-price .discount {
   font-weight: 600;
 }
-/* line 577, ../sass/screen.scss */
+/* line 580, ../sass/screen.scss */
 .commodityInfo .td-price .discount span {
   font-size: 1.2em;
 }
-/* line 581, ../sass/screen.scss */
+/* line 584, ../sass/screen.scss */
 .commodityInfo .td-price .promotion {
   height: 23px;
   line-height: 23px;
@@ -953,19 +953,19 @@ input {
   font-size: 1.1em;
   padding-left: 3px;
 }
-/* line 595, ../sass/screen.scss */
+/* line 598, ../sass/screen.scss */
 .commodityInfo .td-price .promotion:hover .promotionIcon {
   position: absolute;
   margin-top: 5px;
   border-bottom-color: #f40;
 }
-/* line 603, ../sass/screen.scss */
+/* line 606, ../sass/screen.scss */
 .commodityInfo .td-price .promotionIcon {
   position: absolute;
   margin-top: 10px;
   border-top-color: #f40;
 }
-/* line 610, ../sass/screen.scss */
+/* line 613, ../sass/screen.scss */
 .commodityInfo .proSlidedown {
   width: 136px;
   padding: 10px;
@@ -978,26 +978,26 @@ input {
   -webkit-box-shadow: 2px 2px 3px #f4f4f4;
   box-shadow: 2px 2px 3px #f4f4f4;
 }
-/* line 619, ../sass/screen.scss */
+/* line 622, ../sass/screen.scss */
 .commodityInfo .proSlidedown p {
   color: #9c9c9c;
 }
-/* line 622, ../sass/screen.scss */
+/* line 625, ../sass/screen.scss */
 .commodityInfo .proSlidedown .newPro {
   padding-bottom: 4px;
 }
-/* line 626, ../sass/screen.scss */
+/* line 629, ../sass/screen.scss */
 .commodityInfo .td-amount {
   min-height: 79px;
 }
-/* line 630, ../sass/screen.scss */
+/* line 633, ../sass/screen.scss */
 .commodityInfo .item-amount {
   height: 25px;
   overflow: hidden;
   position: relative;
   z-index: 1;
 }
-/* line 635, ../sass/screen.scss */
+/* line 638, ../sass/screen.scss */
 .commodityInfo .item-amount a {
   display: inline-block;
   height: 23px;
@@ -1012,23 +1012,23 @@ input {
   font-size: 14px;
   color: #444;
 }
-/* line 648, ../sass/screen.scss */
+/* line 651, ../sass/screen.scss */
 .commodityInfo .item-amount a:hover {
   border: 1px solid #f60;
 }
-/* line 652, ../sass/screen.scss */
+/* line 655, ../sass/screen.scss */
 .commodityInfo .item-amount .amount-right {
   border-left-color: #aaa;
 }
-/* line 655, ../sass/screen.scss */
+/* line 658, ../sass/screen.scss */
 .commodityInfo .item-amount .amount-color {
   color: #444;
 }
-/* line 658, ../sass/screen.scss */
+/* line 661, ../sass/screen.scss */
 .commodityInfo .item-amount .amount-left {
   border-right-color: #aaa;
 }
-/* line 662, ../sass/screen.scss */
+/* line 665, ../sass/screen.scss */
 .commodityInfo .item-amount input {
   width: 39px;
   height: 15px;
@@ -1040,39 +1040,39 @@ input {
   margin-left: 18px;
   text-align: center;
 }
-/* line 674, ../sass/screen.scss */
+/* line 677, ../sass/screen.scss */
 .commodityInfo .td-sum {
   min-height: 79px;
   color: #f40;
   font-weight: bold;
 }
-/* line 679, ../sass/screen.scss */
+/* line 682, ../sass/screen.scss */
 .commodityInfo .td-sum em {
   font-style: normal;
   font-size: 1.3em;
 }
-/* line 683, ../sass/screen.scss */
+/* line 686, ../sass/screen.scss */
 .commodityInfo .td-sum span {
   font-size: 1.2em;
 }
-/* line 687, ../sass/screen.scss */
+/* line 690, ../sass/screen.scss */
 .commodityInfo .td-operation {
   min-height: 79px;
 }
-/* line 690, ../sass/screen.scss */
+/* line 693, ../sass/screen.scss */
 .commodityInfo .td-operation a {
   color: #3c3c3c;
   text-decoration: none;
   display: inline-block;
   margin-top: 4px;
 }
-/* line 695, ../sass/screen.scss */
+/* line 698, ../sass/screen.scss */
 .commodityInfo .td-operation a:hover {
   color: #f40;
   text-decoration: underline;
 }
 
-/* line 703, ../sass/screen.scss */
+/* line 706, ../sass/screen.scss */
 .footer {
   width: 990px;
   height: 50px;
@@ -1083,7 +1083,7 @@ input {
   background-color: #E5E5E5;
 }
 
-/* line 712, ../sass/screen.scss */
+/* line 715, ../sass/screen.scss */
 .all-selected {
   cursor: pointer;
   float: left;
@@ -1091,66 +1091,66 @@ input {
   padding-left: 5px;
   width: 50px;
 }
-/* line 718, ../sass/screen.scss */
+/* line 721, ../sass/screen.scss */
 .all-selected input {
   position: relative;
   top: 1px;
   cursor: pointer;
 }
-/* line 723, ../sass/screen.scss */
+/* line 726, ../sass/screen.scss */
 .all-selected label {
   display: inline-block;
   cursor: pointer;
 }
 
-/* line 728, ../sass/screen.scss */
+/* line 731, ../sass/screen.scss */
 .operation {
   float: left;
   line-height: 50px;
 }
-/* line 731, ../sass/screen.scss */
+/* line 734, ../sass/screen.scss */
 .operation a {
   margin-left: 25px;
   color: #3c3c3c;
   text-decoration: none;
 }
-/* line 735, ../sass/screen.scss */
+/* line 738, ../sass/screen.scss */
 .operation a:hover {
   text-decoration: underline;
   color: #f40;
 }
 
-/* line 742, ../sass/screen.scss */
+/* line 745, ../sass/screen.scss */
 .float-bar-right {
   float: right;
   line-height: 50px;
   padding-left: 20px;
 }
 
-/* line 747, ../sass/screen.scss */
+/* line 750, ../sass/screen.scss */
 .amount-sum {
   cursor: pointer;
   float: left;
   padding-right: 20px;
 }
-/* line 751, ../sass/screen.scss */
+/* line 754, ../sass/screen.scss */
 .amount-sum em {
   font-style: normal;
   color: #f40;
   font-size: 1.4em;
 }
 
-/* line 757, ../sass/screen.scss */
+/* line 760, ../sass/screen.scss */
 .price-sum {
   float: left;
   line-height: 44px;
   padding-right: 20px;
 }
-/* line 761, ../sass/screen.scss */
+/* line 764, ../sass/screen.scss */
 .price-sum .moneySym {
   color: #f40;
 }
-/* line 764, ../sass/screen.scss */
+/* line 767, ../sass/screen.scss */
 .price-sum .total-sum {
   font-size: 1.8em;
   font-weight: bold;
@@ -1158,12 +1158,12 @@ input {
   color: #f40;
 }
 
-/* line 771, ../sass/screen.scss */
+/* line 774, ../sass/screen.scss */
 .btn-area {
   float: left;
   line-height: 50px;
 }
-/* line 774, ../sass/screen.scss */
+/* line 777, ../sass/screen.scss */
 .btn-area a {
   display: inline-block;
   width: 120px;
@@ -1175,7 +1175,7 @@ input {
   border-radius: 2px;
 }
 
-/* line 786, ../sass/screen.scss */
+/* line 789, ../sass/screen.scss */
 .undo-wrapper {
   border: 1px solid #fcd3b6;
   margin: 40px 0 30px;
@@ -1187,29 +1187,29 @@ input {
   border-radius: 3px;
 }
 
-/* line 793, ../sass/screen.scss */
+/* line 796, ../sass/screen.scss */
 .deleteCom {
   border: 2px solid #fff8d9;
   height: 26px;
   line-height: 26px;
 }
-/* line 797, ../sass/screen.scss */
+/* line 800, ../sass/screen.scss */
 .deleteCom p {
   padding-left: 25px;
   color: #404040;
 }
-/* line 801, ../sass/screen.scss */
+/* line 804, ../sass/screen.scss */
 .deleteCom em {
   font-style: normal;
   margin: 0 4px;
   color: #404040;
 }
-/* line 806, ../sass/screen.scss */
+/* line 809, ../sass/screen.scss */
 .deleteCom a {
   color: #404040;
   text-decoration: none;
 }
-/* line 809, ../sass/screen.scss */
+/* line 812, ../sass/screen.scss */
 .deleteCom a:hover {
   color: #f40;
   text-decoration: underline;
